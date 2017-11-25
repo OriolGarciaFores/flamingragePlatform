@@ -20,6 +20,6 @@ system/storage/cache/index.html
 
 
 # IDE Project files
-/.idea
+.idea/*
 
 node_modules/*
