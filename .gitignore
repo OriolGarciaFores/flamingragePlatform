@@ -23,3 +23,5 @@ system/storage/cache/index.html
 .idea/*
 
 node_modules/*
+
+storage/*
