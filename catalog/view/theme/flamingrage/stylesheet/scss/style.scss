@@ -1,8 +1,13 @@
+@import "../../../../../view/sass/bootstrap/bootstrap";
+@import "../../../../../view/sass/mixins";
 
 /*VARIABLES*/
 $background-color: darkslategray;
 $color-brown: #963;
 
+html{
+    font-size: 16px;
+}
 
 /*
   ========================================
@@ -13,26 +18,74 @@ $color-brown: #963;
 body { 
     background-repeat: no-repeat;
     background-position: top;
-    background-color:#000;
+    background-color:#0d0d0f;
 }
 
 /*
   ========================================
   HEADER
   ========================================
-*/   
-.hero{
-    background: url(../../../../../image/catalog/Header/fondo.jpg) no-repeat center top fixed; 
-    background-size: cover;
-    background-color: #555;
-}
+*/
+.background-header{
+    background: url("https://wallpapercave.com/wp/K0HCxt0.jpg") repeat center top;
+    .hero{
+        background: url(../../../../../image/catalog/Header/fondo.jpg) no-repeat center top fixed;
+        background-size: cover;
+        background-color: #555;
+    }
 
-.img-centrar{
-    margin:0 auto;
+    .img-centrar{
+        margin:0 auto;
+    }
+
+    .title-logo{
+        width: 450px;
+    }
 }
 
 #menuIcon{
     display:none;
+}
+.carousel-fade{
+        .carousel-inner {
+            img{
+                max-height: 750px;
+            }
+            .item {
+                transition-property: opacity;
+                .carousel-caption{
+                    h1{
+                        @include font-size(30px);
+                        @include screen-sm{
+                            @include font-size(60px);
+                        }
+                        @include screen-md{
+                            @include font-size(100px);
+                        }
+                    }
+                }
+            }
+
+            .item,
+            .active.left,
+            .active.right {
+                opacity: 0;
+            }
+
+            .active,
+            .next.left,
+            .prev.right {
+                opacity: 1;
+            }
+
+            .next,
+            .prev,
+            .active.left,
+            .active.right {
+                left: 0;
+                transform: translate3d(0, 0, 0);
+            }
+        }
 }
 
 /*
@@ -42,6 +95,8 @@ NAVIGATION
 */   
 
 #cssmenu{
+    margin-top: 0;
+    text-align: center;
 
     a {
         margin: 0;
@@ -51,7 +106,7 @@ NAVIGATION
 
     .nav__item {
         display: inline-block;
-        width: 19%;
+        width: 10%;
         line-height: 1em;
         padding: 1em;
         margin: 0;
@@ -61,8 +116,7 @@ NAVIGATION
         z-index: 99;
 
         a {
-            color:#FFF;
-            font-family:"Algerian";
+            color:#FFFFE7;
             font-size: 0.9375em;
             line-height: 1.875em;
             padding: 0.9375em 1.25em;
@@ -70,18 +124,10 @@ NAVIGATION
             -moz-transition: color .15s;
             -o-transition: color .15s;
             transition: color .15s;
-            border-bottom-style:inset;
-            border-bottom-width: thick;
-            border-bottom-color:white;
-            -moz-border-bottom-colors:black;
         }
 
         a:hover {
             color:#FF0;
-            border-bottom-style:inset;
-            border-bottom-width: thick;
-            border-bottom-color:#FF0;
-            -moz-border-bottom-colors:#FF0;
         }
 
         ul {
@@ -108,7 +154,7 @@ NAVIGATION
             list-style: none;
 
             a{
-                color:#FFF;
+                color:#FFFFE7;
                 font-size: 1em;
                 padding: 0.3125em 0.5em 0.4375em 1em;
                 display: block;
@@ -144,7 +190,7 @@ NAVIGATION
             top: 5.0625em;
             visibility: visible;
         }
-    } 
+    }
 }
 
 
@@ -167,7 +213,7 @@ NAVIGATION
             }
 
             .caption{             
-                color: white;               
+                color: #FFFFE7;
             }
         }
     }
@@ -190,7 +236,7 @@ NAVIGATION
             }
 
             .caption{             
-                color: white;               
+                color: #FFFFE7;
             }
         }
     }
@@ -229,7 +275,7 @@ NAVIGATION
 
     .separador{
         background-color: darkslategray;
-        color:white;
+        color:#FFFFE7;
     }
 
     li{
@@ -255,7 +301,7 @@ NAVIGATION
         margin: 0 auto;
         padding: 5px 20px;
         background:#666;
-        color: #fff;
+        color: #FFFFE7;
         text-align: center;
         font-size: 24px;
         border-radius: 8px;
