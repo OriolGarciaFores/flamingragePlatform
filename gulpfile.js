@@ -18,19 +18,19 @@ var size = require('gulp-size');
 
 //
 
-// compile all your Sass
-gulp.task('sass', function (){
-    gulp.src(['./dev/sass/*.scss', '!./dev/sass/_variables.scss'])
+// compile all your Sass CATALOG
+gulp.task('catalog', function (){
+    gulp.src(['./catalog/view/theme/flamingrage/stylesheet/scss/*.scss', '!./catalog/view/theme/flamingrage/stylesheet/_variables.scss'])
         .pipe(sass({
-            includePaths: ['./dev/sass'],
+            includePaths: ['./catalog/view/theme/flamingrage/stylesheet/scss'],
             outputStyle: 'expanded'
         }))
         .pipe(prefix(
             "last 1 version", "> 1%", "ie 8", "ie 7"
         ))
-        .pipe(gulp.dest('./dev/css'))
+        .pipe(gulp.dest('./catalog/view/theme/flamingrage/stylesheet/scss'))
         .pipe(minifycss())
-        .pipe(gulp.dest('./prod/css'));
+        .pipe(gulp.dest('./catalog/view/theme/flamingrage/stylesheet/'));
 });
 
 // Uglify JS

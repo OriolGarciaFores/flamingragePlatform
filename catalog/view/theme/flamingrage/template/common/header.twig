@@ -1,116 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--[if IE]><![endif]-->
-<!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
-<!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
+<!--[if IE 8 ]>
+<html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
+<!--[if IE 9 ]>
+<html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html dir="{{ direction }}" lang="{{ lang }}">
 <!--<![endif]-->
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>{{ title }}</title>
-<base href="{{ base }}" />
-{% if description %}
-<meta name="description" content="{{ description }}" />
-{% endif %}
-{% if keywords %}
-<meta name="keywords" content="{{ keywords }}" />
-{% endif %}
-<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
-<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
-<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/flamingrage/stylesheet/stylesheet.css" rel="stylesheet">
-{% for style in styles %}
-<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
-{% endfor %}
-{% for script in scripts %}
-<script src="{{ script }}" type="text/javascript"></script>
-{% endfor %}
-<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
-{% for link in links %}
-<link href="{{ link.href }}" rel="{{ link.rel }}" />
-{% endfor %}
-{% for analytic in analytics %}
-{{ analytic }}
-{% endfor %}
-<link rel="stylesheet" href="catalog/view/theme/flamingrage/stylesheet/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="{{ base }}"/>
+    {% if description %}
+        <meta name="description" content="{{ description }}"/>
+    {% endif %}
+    {% if keywords %}
+        <meta name="keywords" content="{{ keywords }}"/>
+    {% endif %}
+    <meta property="og:title" content={{ title }}/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content={{ base }}/>
+    {% if logo %}
+        <meta property="og:image" content={{ logo }}/>
+    {% endif %}
+    {% if description %}
+        <meta name="og:description" content="{{ description }}"/>
+    {% endif %}
+    <link rel="canonical" href="http://www.flamingrage.hol.es/">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    {% for style in styles %}
+        <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}"/>
+    {% endfor %}
+    <link href="catalog/view/theme/flamingrage/stylesheet/style.css" rel="stylesheet" type="text/css"/>
+    {% for script in scripts %}
+        <script src="{{ script }}" type="text/javascript"></script>
+    {% endfor %}
+    <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+    {% for link in links %}
+        <link href="{{ link.href }}" rel="{{ link.rel }}"/>
+    {% endfor %}
+
+    <title>{{ title }}</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    {% for analytic in analytics %}
+        {{ analytic }}
+    {% endfor %}
 </head>
 <body>
-<nav id="top">
-  <div class="container">{{ currency }}
-    {{ language }}
-    <div id="top-links" class="nav pull-right">
-      <ul class="list-inline">
-        <li><a href="{{ contact }}"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md">{{ telephone }}</span></li>
-        <li class="dropdown"><a href="{{ account }}" title="{{ text_account }}" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md">{{ text_account }}</span> <span class="caret"></span></a>
-          <ul class="dropdown-menu dropdown-menu-right">
-            {% if logged %}
-            <li><a href="{{ account }}">{{ text_account }}</a></li>
-            <li><a href="{{ order }}">{{ text_order }}</a></li>
-            <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
-            <li><a href="{{ download }}">{{ text_download }}</a></li>
-            <li><a href="{{ logout }}">{{ text_logout }}</a></li>
-            {% else %}
-            <li><a href="{{ register }}">{{ text_register }}</a></li>
-            <li><a href="{{ login }}">{{ text_login }}</a></li>
-            {% endif %}
-          </ul>
-        </li>
-        <li><a href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ text_wishlist }}</span></a></li>
-        <li><a href="{{ shopping_cart }}" title="{{ text_shopping_cart }}"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ text_shopping_cart }}</span></a></li>
-        <li><a href="{{ checkout }}" title="{{ text_checkout }}"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md">{{ text_checkout }}</span></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-      
-      <!--<script type="text/javascript" src="Js/snow.js"></script>-->
-<header class="jumbotron hero text-center">
+<div class="background-header">
+<div class="container">
+    <img class="img-responsive img-centrar" alt="header" src={{ img_header }}>
+    <img class="img-responsive img-centrar title-logo" alt="titulo" src={{ title_img }}>
+</div>
+<nav id="drawer">
+        <ul id="cssmenu">
+            <li class=" pull-left nav__item"><a>IDIOMAS</a></li>
 
-    <img class="img-responsive img-centrar" alt="titulo" src="{{title_img}}">
-        
+            <li class="nav__item"><a>INICIO</a></li>
+            <li class="nav__item"><a>PROYECTOS</a></li>
+            <li class="nav__item"><a>GUÍAS</a></li>
+            <li class="nav__item"><a>TERRITORIOS</a></li>
+            <li class="nav__item"><a>DISCO</a></li>
+
+            <li class="pull-right nav__item"><a>LOGIN</a></li>
+
+        </ul>
+        {# {{ language }}
+         <div id="top-links" class="nav pull-right">
+             <ul class="list-inline">
+                 <li class="dropdown"><a href="{{ account }}" title="{{ text_account }}" class="dropdown-toggle"
+                                         data-toggle="dropdown"><i class="fa fa-user"></i> <span
+                                 class="hidden-xs hidden-sm hidden-md">{{ text_account }}</span> <span
+                                 class="caret"></span></a>
+                     <ul class="dropdown-menu dropdown-menu-right">
+                         {% if logged %}
+                             <li><a href="{{ account }}">{{ text_account }}</a></li>
+                             <li><a href="{{ order }}">{{ text_order }}</a></li>
+                             <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
+                             <li><a href="{{ download }}">{{ text_download }}</a></li>
+                             <li><a href="{{ logout }}">{{ text_logout }}</a></li>
+                         {% else %}
+                             <li><a href="{{ register }}">{{ text_register }}</a></li>
+                             <li><a href="{{ login }}">{{ text_login }}</a></li>
+                         {% endif %}
+                     </ul>
+                 </li>
+             </ul>
+         </div>#}
+</nav>
+</div>
+<!--<script type="text/javascript" src="Js/snow.js"></script>-->
+<header class="text-center">
+
     <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff">
-                        <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
-            </svg>
+        <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+    </svg>
 
 </header>
 
-<nav id="drawer">
+<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <!-- INDICADORES las redondas -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+    <!-- END INDICADORES -->
+    <!-- LISTA IMAGENES -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="https://i.imgur.com/eWtfMME.png" alt="Los Angeles" style="width:100%;">
+            <div class="carousel-caption">
+                <h1>TEST</h1>
+            </div>
+        </div>
 
-
-    <ul id="cssmenu">
-        <li class="nav__item"><a href="index.php"><span>Inicio</span></a></li>
-        <li class="nav__item"><a href="#"><span>Proyectos</span></a>
-            <ul>
-                <li><a href="HTML/flaming-rage.php"><span>Flaming Rage</span></a></li>
-                <li class="last"><a href="HTML/storm-bullets.php"><span>Storm Bullets</span></a></li>
-            </ul>
-        </li>
-        <li class="nav__item"><a href="#"><span>Guías </span></a>
-            <ul>
-                <li><a href="HTML/guiasonyvegas.php"><span>Fraps y Sony Vegas</span></a></li>
-                <li><a href="HTML/office2007.php"><span>Office 2007</span></a></li>
-                <li><a href="HTML/guiaservmc.php"><span>Servidor Minecraft</span></a></li>
-                <li><a href="HTML/photoshopcs6.php"><span>Photoshop CS6</span></a></li>
-                <li><a href="HTML/windows10.php"><span>Windows 10</span></a></li>
-                <li class="last"><a href="HTML/guia-mando-pc.php"><span>Mando en PC</span></a></li>
-            </ul>
-        </li>
-        <li class="nav__item"><a href='#'><span>Territorio</span></a>
-            <ul>
-                <li><a href='http://euw.leagueoflegends.com/es'><span>League of Legends</span></a></li>
-                <li><a href='http://s4league.aeriagames.com/'><span>S4</span></a></li>
-                <li><a href='http://en.aion.gameforge.com/website/'><span>Aion</span></a></li>
-                <li class="last"><a href='http://es.nostale.gameforge.com/news/index'><span>Nostale</span></a></li>
-            </ul>
-        </li>
-        <li class="nav__item"><a href="HTML/disco.php"><span>Disco</span></a></li>
-    </ul>
-
-
-</nav>
-
-
+        <div class="item">
+            <img src="http://workwallpaper.com/wp-content/uploads/2017/09/wallpaper-2015_111528356_269.jpg" alt="Chicago" style="width:100%;">
+            <div class="carousel-caption">
+                <h1>TEST 2</h1>
+            </div>
+        </div>
+    </div>
+    <!-- END LISTA IMAGENES -->
+    <!-- CONTROLES SLIDER -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+    <!-- END CONTROLES SLIDER -->
+</div>

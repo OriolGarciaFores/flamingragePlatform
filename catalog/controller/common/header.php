@@ -77,14 +77,17 @@ class ControllerCommonHeader extends Controller {
 		$data['cart'] = $this->load->controller('common/cart');
 		$data['menu'] = $this->load->controller('common/menu');
                 
-                
+                //TODO Mejorar al obtener el banner deseado.
                 $this->load->model('setting/module');
                 $modules = $this->model_design_banner->getBanner(7);
                 $this->load->model('tool/image');
+
                 if ($modules) {
 				$data['title_img'] = $this->model_tool_image->resize($modules[0]['image'], 600, 200);
+				$data['img_header'] = $this->model_tool_image->resize($modules[1]['image'], 145, 63);
 			} else {
 				$data['title_img'] = '';
+				$data['img_header'] = '';
 			}
 
 		return $this->load->view('common/header', $data);
