@@ -1,58 +1,58 @@
 # Config and Htaccess Files
-/upload/.htaccess
-/upload/config.php
-/upload/admin/config.php
+/.htaccess
+/config.php
+/admin/config.php
 
 # Image File
-!/upload/image/no_image.jpg
+!/image/no_image.jpg
 
 # Image Cache Files
-/upload/image/cache/*
-!/upload/image/cache/index.html
+/image/cache/*
+!/image/cache/index.html
 
 # Templates Files
-/upload/image/templates/*
-/upload/image/templates/default.jpg
+/image/templates/*
+/image/templates/default.jpg
 
 # Backup Files
-/upload/system/storage/backup/*
-!/upload/system/storage/backup/index.html
+/system/storage/backup/*
+!/system/storage/backup/index.html
 
 # System Cache Files
-/upload/system/storage/cache/*
-!/upload/system/storage/cache/index.html
+/system/storage/cache/*
+!/system/storage/cache/index.html
 
 # Download Files
-/upload/system/storage/download/*
-!/upload/system/storage/download/index.html
+/system/storage/download/*
+!/system/storage/download/index.html
 
 # Log Files
-/upload/system/storage/logs/*
-!/upload/system/storage/logs/index.html
+/system/storage/logs/*
+!/system/storage/logs/index.html
 
 # Marketing Files
-/upload/system/storage/marketing/*
-!/upload/system/storage/marketing/index.html
+/system/storage/marketing/*
+!/system/storage/marketing/index.html
 
 # Modification Files
-/upload/system/storage/modification/*
-!/upload/system/storage/modification/index.html
+/system/storage/modification/*
+!/system/storage/modification/index.html
 
 # Session Files
-/upload/system/storage/session/*
-!/upload/system/storage/session/index.html
+/system/storage/session/*
+!/system/storage/session/index.html
 
 # Upload Files
-/upload/system/storage/upload/*
-!/upload/system/storage/upload/index.html
+/system/storage/upload/*
+!/system/storage/upload/index.html
 
 # Flags
 # remove sharp char if you want to add flags to gitignore
-# /upload/flags/*
+# /flags/*
 
 # If you want to ignore install file use following lines [on development mode]
-# /upload/backup.install/*
-# /upload/install/*
+# /backup.install/*
+# /install/*
 
 /tests/phpunit/vendor/*
 /tests/phpunit/composer.lock
