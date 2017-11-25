@@ -21,3 +21,5 @@ system/storage/cache/index.html
 
 # IDE Project files
 /.idea
+
+node_modules/*
