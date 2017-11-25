@@ -1,0 +1,8 @@
+{
+  "require":{
+    "symfony/var-dumper": "^3.1"
+  },
+  "config":{
+    "vendor-dir": "system/library"
+  }
+}

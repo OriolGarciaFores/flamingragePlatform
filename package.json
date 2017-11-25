@@ -1,0 +1,22 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "composer": "^0.14.2",
+    "gulp-install": "^1.1.0"
+  },
+  "name": "flamingrage_opencart",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
