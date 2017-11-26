@@ -7778,7 +7778,7 @@ NAVIGATION
 
 #cssmenu .nav__item {
   display: inline-block;
-  width: 10%;
+  width: 12%;
   line-height: 1em;
   padding: 1em;
   margin: 0;
@@ -7813,7 +7813,7 @@ NAVIGATION
   transition: all .3s .1s;
   border-radius: 5px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
-  background-color: darkslategray;
+  background-color: #3a3e3e;
   list-style: none;
 }
 
@@ -7854,12 +7854,53 @@ NAVIGATION
   VIDEO CARDS
   ========================================
 */
+.last-posts h2 {
+  color: #FFFFE7;
+}
+
+.last-posts .col-md-4 {
+  padding: 0;
+  margin-top: 1em;
+}
+
+.last-posts .col-md-4 .img-thumbnail-1, .last-posts .col-md-4 .img-thumbnail-2 {
+  height: 500px;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+}
+
+.last-posts .col-md-4 .img-thumbnail-1 .caption, .last-posts .col-md-4 .img-thumbnail-2 .caption {
+  color: #FFFFE7;
+}
+
+.last-posts .col-md-4 .img-thumbnail-1 .caption p, .last-posts .col-md-4 .img-thumbnail-2 .caption p {
+  color: #535353;
+}
+
+.last-posts .col-md-4 .img-thumbnail-1 {
+  background: url("http://silviahartmann.com/background-tile-art/images/black_pattern_tile.jpg") repeat;
+}
+
+.last-posts .col-md-4 .img-thumbnail-2 {
+  background: url("https://wallpapercave.com/wp/K0HCxt0.jpg") repeat;
+}
+
+.last-posts .col-xs-12 {
+  padding: 0;
+}
+
+.last-posts .col-xs-12 .img-thumbnail-* {
+  padding: 0;
+  width: 100%;
+}
+
 .row .col-md-4 {
   margin-top: 1em;
 }
 
 .row .col-md-4 .img-thumbnail {
-  background-color: darkslategray;
+  background-color: #3a3e3e;
   border-radius: 0;
   border: none;
 }
@@ -7878,7 +7919,7 @@ NAVIGATION
 }
 
 .row .col-md-6 .img-thumbnail {
-  background-color: darkslategray;
+  background-color: #3a3e3e;
   border-radius: 0;
   border: none;
 }
@@ -7900,7 +7941,7 @@ NAVIGATION
 .subcontenido {
   margin-top: 0.62em;
   margin-bottom: 0.62em;
-  color: #963;
+  color: #535353;
   font-size: 15px;
   line-height: 1.5;
   padding: 1em;
@@ -7920,11 +7961,6 @@ NAVIGATION
 
 .subcontenido button {
   border-radius: 0;
-}
-
-.subcontenido .separador {
-  background-color: darkslategray;
-  color: #FFFFE7;
 }
 
 .subcontenido li {
@@ -7997,8 +8033,9 @@ NAVIGATION
   ========================================
 */
 footer {
-  background-color: darkslategray;
+  background-color: #000000;
   padding: 1em;
+  margin-top: 20px;
 }
 
 footer a:hover {
@@ -8007,7 +8044,7 @@ footer a:hover {
 }
 
 footer h5 {
-  color: #963;
+  color: #FFFFE7;
 }
 
 footer #myBtn {
@@ -8018,22 +8055,22 @@ footer #myBtn {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: red;
-  color: white;
+  background-color: #3a3e3e;
+  color: #FFFFE7;
   cursor: pointer;
   padding: 15px;
 }
 
 footer #myBtn:hover {
-  background-color: #555;
+  background-color: #000000;
 }
 
 footer a {
-  color: #ffffff;
+  color: #535353;
 }
 
 footer a:focus {
-  color: #ffffff;
+  color: #535353;
   text-decoration: none;
 }
 
@@ -8047,6 +8084,14 @@ footer #panel_websites {
 
 footer #panel_contact {
   display: none;
+}
+
+footer .img-centrar {
+  margin: 0 auto;
+}
+
+footer .title-logo {
+  width: 450px;
 }
 
 /*
