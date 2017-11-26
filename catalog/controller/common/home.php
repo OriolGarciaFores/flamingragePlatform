@@ -18,18 +18,32 @@ class ControllerCommonHome extends Controller
         $categories = $this->model_catalog_category->getCategories();
 
         if (isset($categories)) {
-            foreach ($categories as $key => $category) {
-                $categories[$key]['description'] = html_entity_decode(substr($category['description'], 0, 500));
+            $i = 0;
+            foreach ($categories as $category) {
 
-                if(isset($category['image']) && !empty($category['image'])){
-                    $categories[$key]['image'] = $this->model_tool_image->resize($category['image'], 0, 0);
-                }else{
-                    $categories[$key]['image'] = $this->model_tool_image->resize('catalog/placeholder.jpg', 0, 0);
+                $childs = $this->model_catalog_category->getCategories($category['category_id']);
+                if(!isset($childs) || empty($childs)){
+                    $childs[] = $category;
+                }
+
+                if (isset($childs) && !empty($childs)) {
+                    foreach ($childs as $key => $child) {
+
+                        $child['description'] = isset($child['description']) ? html_entity_decode(substr($child['description'], 0, 500)) : '';
+
+                        if (isset($child['image']) && !empty($child['image'])) {
+                            $child['image'] = $this->model_tool_image->resize($child['image'], 0, 0);
+                        } else {
+                            $child['image'] = $this->model_tool_image->resize('catalog/placeholder.jpg', 0, 0);
+                        }
+                        $data['categories'][$i] = $child;
+                        $i = $i + 1;
+                    }
+
                 }
 
             }
-            $data['categories'] = isset($categories) ? $categories : '';
-        }else{
+        } else {
             $data['categories'] = '';
         }
 
