@@ -37,3 +37,19 @@ if(!function_exists('hash_equals')) {
 		}
 	}
 }
+
+if (!function_exists('printr')){
+    function printr($obj){
+        echo "<pre>" . print_r($obj, true) . "</pre>";
+    }
+}
+
+if (!function_exists('dd')){
+    function dd($obj){
+        if(function_exists('dump')){
+            dump($obj);
+        }else{
+            printr($obj);
+        }
+    }
+}
