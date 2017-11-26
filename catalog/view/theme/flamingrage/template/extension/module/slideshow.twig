@@ -1,0 +1,51 @@
+<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <!-- INDICADORES las redondas -->
+    <ol class="carousel-indicators">
+        {% set i = 0 %}
+        {% for banner in banners %}
+            {% if i == 0 %}
+                <li data-target="#myCarousel" data-slide-to="{{ i }}" class="active"></li>
+            {% else %}
+                <li data-target="#myCarousel" data-slide-to="{{ i }}"></li>
+            {% endif %}
+            {% set i = i +1 %}
+        {% endfor %}
+    </ol>
+    <!-- END INDICADORES -->
+    <!-- LISTA IMAGENES -->
+    <div class="carousel-inner">
+        {% set i = 0 %}
+        {% for banner in banners %}
+            {% if i == 0 %}
+                <div class="item active">
+                    <img src="{{ banner.image }}" alt="{{ banner.title }}" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h1>{{ banner.title }}</h1>
+                    </div>
+                </div>
+            {% else %}
+                <div class="item">
+                    <img src="{{ banner.image }}"
+                         alt="{{ banner.title }}" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h1>{{ banner.title }}</h1>
+                    </div>
+                </div>
+            {% endif %}
+            {% set i = i +1 %}
+        {% endfor %}
+
+
+
+
+    </div>
+    <!-- END LISTA IMAGENES -->
+    <!-- CONTROLES SLIDER -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+    <!-- END CONTROLES SLIDER -->
+</div>

@@ -1,75 +1,38 @@
 {{ header }}
-
+{{ content_top }}
 <main id="common-home" class="container">
 
 
     <!-- ULTIMOS CAMBIOS -->
 
     <section class="last-posts row">
-        <header><h2 class="separador text-center">Ultimos cambios</h2></header>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="img-thumbnail-1">
-                <img class="img-responsive" src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/68dd54ca-60cf-4ef7-898b-26d7cbe48ec7/10-dithering-opt.jpg">
-                <div class="caption text-center">
-                    <p>29/06/17 @22:00</p>
-                    <h2>NUEVO SOPORTE</h2>
-                    <p>Nuevo diseño, formulario para enviar mensajes y contactar con los administradores de Flaming Rage. </p>
+        <header><h2 class="text-center">Ultimos cambios</h2></header>
+        {% set i = 0 %}
+        {% for category in categories %}
+            {% if i%2 == 0 %}
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="img-thumbnail-1">
+                        <img class="img-responsive"
+                             src="{{ category.image }}">
+                        <div class="caption text-center">
+                            {{ category.description }}
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="img-thumbnail-2">
-                <img class="img-responsive" src="https://n6-img-fp.akamaized.net/iconos-gratis/ps4-gamepad_318-81379.jpg?size=338&ext=jpg">
-                <div class="caption text-center">
-                    <p>29/06/17 @22:20</p>
-                    <h2>GUÍA MANDO PS3</h2>
-                    <p>Text</p>
+            {% else %}
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="img-thumbnail-2">
+                        <img class="img-responsive"
+                             src="{{ category.image }}">
+                        <div class="caption text-center">
+                            {{ category.description }}
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="img-thumbnail-1">
-                <img class="img-responsive" src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/68dd54ca-60cf-4ef7-898b-26d7cbe48ec7/10-dithering-opt.jpg">
-                <div class="caption text-center">
-                    <p>Data</p>
-                    <h2>Title</h2>
-                    <p>Text</p>
-                </div>
-            </div>
-        </div>
+            {% endif %}
 
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="img-thumbnail-2">
-                <img class="img-responsive" src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/68dd54ca-60cf-4ef7-898b-26d7cbe48ec7/10-dithering-opt.jpg">
-                <div class="caption text-center">
-                    <p>Data</p>
-                    <h2>Title</h2>
-                    <p>Text</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="img-thumbnail-1">
-                <img class="img-responsive" src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/68dd54ca-60cf-4ef7-898b-26d7cbe48ec7/10-dithering-opt.jpg">
-                <div class="caption text-center">
-                    <p>Data</p>
-                    <h2>Title</h2>
-                    <p>Text</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="img-thumbnail-2">
-                <img class="img-responsive" src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/68dd54ca-60cf-4ef7-898b-26d7cbe48ec7/10-dithering-opt.jpg">
-                <div class="caption text-center">
-                    <p>Data</p>
-                    <h2>Title</h2>
-                    <p>Text</p>
-                </div>
-            </div>
-        </div>
+            {% set i = i + 1 %}
+        {% endfor %}
     </section>
 
 
@@ -78,6 +41,7 @@
     <!-- LIST VIDEOS -->
 
     <section class="row">
+        <header><h2 class="text-center">Videos de la comunidad</h2></header>
         <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="img-thumbnail">
                 <iframe src="https://www.youtube.com/embed/9SygUTwLeAM" allowfullscreen frameborder="0"></iframe>

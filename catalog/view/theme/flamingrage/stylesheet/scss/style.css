@@ -8027,6 +8027,10 @@ NAVIGATION
   padding: 1em;
 }
 
+section header h2 {
+  color: #FFFFE7;
+}
+
 /*
   ========================================
   FOOTER

@@ -83,8 +83,8 @@ class ControllerCommonHeader extends Controller {
                 $this->load->model('tool/image');
 
                 if ($modules) {
-				$data['title_img'] = $this->model_tool_image->resize($modules[0]['image'], 600, 200);
-				$data['img_header'] = $this->model_tool_image->resize($modules[1]['image'], 145, 63);
+				$data['title_img'] = $this->model_tool_image->resize($modules[0]['image'], 0, 0);
+				$data['img_header'] = $this->model_tool_image->resize($modules[1]['image'], 0, 0);
 			} else {
 				$data['title_img'] = '';
 				$data['img_header'] = '';
