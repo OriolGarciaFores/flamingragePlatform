@@ -9,6 +9,7 @@
         <header><h2 class="text-center">Ultimos cambios</h2></header>
         {% set i = 0 %}
         {% for category in categories %}
+            {% if i < 6 %}
             {% if i%2 == 0 %}
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <div class="img-thumbnail-1">
@@ -30,6 +31,7 @@
                     </div>
                 </div>
             {% endif %}
+        {% endif %}
 
             {% set i = i + 1 %}
         {% endfor %}

@@ -1,0 +1,18 @@
+{{ header }}
+<div id="category" class="container">
+    <section class="row">
+        <header><h2 class="text-center">{{ title }}</h2></header>
+        {% for category in categories %}
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail">
+                            <img class="img-responsive"
+                                 src="{{ category.image }}">
+                            <div class="caption text-center">
+                                {{ category.description }}
+                            </div>
+                        </div>
+                    </div>
+        {% endfor %}
+    </section>
+</div>
+{{ footer }}

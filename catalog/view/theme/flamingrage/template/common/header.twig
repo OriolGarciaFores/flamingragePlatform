@@ -56,19 +56,18 @@
 </head>
 <body>
 <div class="background-header">
-<div class="container">
-    <img class="img-responsive img-centrar" alt="header" src={{ img_header }}>
-    <img class="img-responsive img-centrar title-logo" alt="titulo" src={{ title_img }}>
-</div>
-<nav id="drawer">
+    <div class="container">
+        <img class="img-responsive img-centrar" alt="header" src={{ img_header }}>
+        <img class="img-responsive img-centrar title-logo" alt="titulo" src={{ title_img }}>
+    </div>
+    <nav id="drawer">
         <ul id="cssmenu">
             <li class=" pull-left nav__item"><a>IDIOMAS</a></li>
 
-            <li class="nav__item"><a>INICIO</a></li>
-            <li class="nav__item"><a>PROYECTOS</a></li>
-            <li class="nav__item"><a>GUÍAS</a></li>
-            <li class="nav__item"><a>TERRITORIOS</a></li>
-            <li class="nav__item"><a>DISCO</a></li>
+            <li class="nav__item"><a href="{{ home }}">INICIO</a></li>
+            {% for category in categories %}
+                <li class="nav__item"><a href="{{ category.href }}">{{ category.name }}</a></li>
+            {% endfor %}
 
             <li class="pull-right nav__item"><a>LOGIN</a></li>
 
@@ -95,7 +94,7 @@
                  </li>
              </ul>
          </div>#}
-</nav>
+    </nav>
 </div>
 <!--<script type="text/javascript" src="Js/snow.js"></script>-->
 <header class="text-center">
