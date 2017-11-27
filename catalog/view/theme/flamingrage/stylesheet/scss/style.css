@@ -8100,6 +8100,16 @@ footer .title-logo {
 
 /*
   ========================================
+  CATEGORY
+  ========================================
+*/
+#category .img-thumbnail {
+  height: 500px;
+  background: url("http://silviahartmann.com/background-tile-art/images/black_pattern_tile.jpg") repeat;
+}
+
+/*
+  ========================================
   MEDIA QUERIES
   ========================================
 */
