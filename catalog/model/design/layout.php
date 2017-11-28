@@ -15,4 +15,10 @@ class ModelDesignLayout extends Model {
 		
 		return $query->rows;
 	}
+
+	public function getRoute($layout_id){
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "layout_route WHERE layout_id = '" . (int)$layout_id . "' ");
+
+        return $query->rows;
+    }
 }
