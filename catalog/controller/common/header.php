@@ -79,8 +79,17 @@ class ControllerCommonHeader extends Controller
         $data['telephone'] = $this->config->get('config_telephone');
 
         $data['categories'] = $categories;
+        $this->load->model('design/layout');
         foreach ($categories as $key => $category) {
-            $data['categories'][$key]['href'] = $this->url->link('contents/category', 'category_id=' . $category['category_id']);
+
+            $category_layout = $this->model_catalog_category->getCategoryLayoutId($category['category_id']);
+            $layout = $this->model_design_layout->getRoute($category_layout);
+            if(!empty($layout)){
+                $data['categories'][$key]['href'] = $this->url->link($layout[0]['route'], 'category_id=' . $category['category_id']);
+            }else{
+                $data['categories'][$key]['href'] = $this->url->link('contents/category', 'category_id=' . $category['category_id']);
+            }
+
         }
 
         $data['language'] = $this->load->controller('common/language');
