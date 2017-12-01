@@ -79,6 +79,7 @@ class ControllerCommonHeader extends Controller
         $data['telephone'] = $this->config->get('config_telephone');
 
         $data['categories'] = $categories;
+        $this->load->model('design/banner');
         $this->load->model('design/layout');
         foreach ($categories as $key => $category) {
 

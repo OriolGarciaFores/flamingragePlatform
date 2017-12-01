@@ -3,20 +3,8 @@ class ControllerCommonFooter extends Controller {
 	public function index() {
 		$this->load->language('common/footer');
 
-		$this->load->model('catalog/information');
-
-		$data['informations'] = array();
-
-		foreach ($this->model_catalog_information->getInformations() as $result) {
-			if ($result['bottom']) {
-				$data['informations'][] = array(
-					'title' => $result['title'],
-					'href'  => $this->url->link('information/information', 'information_id=' . $result['information_id'])
-				);
-			}
-		}
-
         $this->load->model('setting/module');
+        $this->load->model('design/banner');
         $modules = $this->model_design_banner->getBanner(7);
         $this->load->model('tool/image');
 
@@ -28,6 +16,7 @@ class ControllerCommonFooter extends Controller {
             $data['img_header'] = '';
         }
 
+        $data['information'] = $this->url->link('information/information');
 		$data['contact'] = $this->url->link('information/contact');
 		$data['return'] = $this->url->link('account/return/add', '', true);
 		$data['sitemap'] = $this->url->link('information/sitemap');
