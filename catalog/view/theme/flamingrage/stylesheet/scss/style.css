@@ -8063,8 +8063,21 @@ footer .title-logo {
   color: #FFFFE7;
 }
 
+#info-web h3 {
+  color: #FFFFE7;
+}
+
 #info-web p {
   color: #535353;
+}
+
+#info-web .thumbnail {
+  background-color: transparent;
+  border: 0 none;
+}
+
+#info-web .thumbnail .caption-perfil {
+  padding: 1rem;
 }
 
 /*

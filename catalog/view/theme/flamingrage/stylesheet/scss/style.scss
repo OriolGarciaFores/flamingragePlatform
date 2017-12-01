@@ -428,8 +428,19 @@ footer{
     h1{
         color: $titles;
     }
+    h3{
+        color: $titles;
+    }
     p{
         color: $text-color;
+    }
+
+    .thumbnail {
+        background-color: transparent;
+        border: 0 none;
+        .caption-perfil {
+            padding: 1rem;
+        }
     }
 }
 
