@@ -16,7 +16,11 @@ class ControllerCommonFooter extends Controller {
             $data['img_header'] = '';
         }
 
-        $data['information'] = $this->url->link('information/information');
+        $this->load->model('catalog/information');
+        $informations = $this->model_catalog_information->getInformations();
+
+        $data['team'] = $this->url->link('information/information', 'information_id=' . $informations[1]['information_id']);
+        $data['information'] = $this->url->link('information/information' , 'information_id=' . $informations[0]['information_id']);
 		$data['contact'] = $this->url->link('information/contact');
 		$data['return'] = $this->url->link('account/return/add', '', true);
 		$data['sitemap'] = $this->url->link('information/sitemap');
