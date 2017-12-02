@@ -61,22 +61,19 @@ class ControllerCommonHeader extends Controller
         $this->load->model("catalog/category");
         $categories = $this->model_catalog_category->getCategories();
 
+        if($this->customer->isLogged()){
+            $data['text_login'] = $this->language->get('text_logout');
+            $data['login'] =$this->url->link('account/login', '', true);
+        }else{
+            $data['text_login'] = $this->language->get('text_login');
+            $data['login'] = $this->url->link('account/login', '', true);
+        }
 
 
         $data['home'] = $this->url->link('common/home');
         $data['wishlist'] = $this->url->link('account/wishlist', '', true);
-        $data['logged'] = $this->customer->isLogged();
-        $data['account'] = $this->url->link('account/account', '', true);
-        $data['register'] = $this->url->link('account/register', '', true);
-        $data['login'] = $this->url->link('account/login', '', true);
-        $data['order'] = $this->url->link('account/order', '', true);
-        $data['transaction'] = $this->url->link('account/transaction', '', true);
-        $data['download'] = $this->url->link('account/download', '', true);
         $data['logout'] = $this->url->link('account/logout', '', true);
-        $data['shopping_cart'] = $this->url->link('checkout/cart');
-        $data['checkout'] = $this->url->link('checkout/checkout', '', true);
         $data['contact'] = $this->url->link('information/contact');
-        $data['telephone'] = $this->config->get('config_telephone');
 
         $data['categories'] = $categories;
         $this->load->model('design/banner');

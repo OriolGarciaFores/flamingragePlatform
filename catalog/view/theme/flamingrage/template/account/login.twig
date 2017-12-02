@@ -1,0 +1,49 @@
+{{ header }}
+<main id="account-login" class="container">
+    {% if success %}
+        <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}</div>
+    {% endif %}
+    {% if error_warning %}
+        <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+        </div>
+    {% endif %}
+
+    <section class="row">
+        <h1 class="text-center">{{ text_returning_customer }}</h1>
+        <div class="box-login col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+            <form action="{{ action }}" method="post" enctype="multipart/form-data" class="col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+                <div class="form-group">
+                    <label class="control-label" for="input-email">{{ entry_email }}</label>
+                    <div class="input-group">
+                        <input type="text" name="email" value="{{ email }}" placeholder="{{ entry_email }}"
+                               id="input-email" class="form-control" autocomplete="off"/>
+                        <div class="input-group-addon" id="icon-email">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="input-password">{{ entry_password }}</label>
+                    <div class="input-group">
+                        <input type="password" name="password" value="{{ password }}" placeholder="{{ entry_password }}"
+                               id="input-password" class="form-control"/>
+                        <div class="input-group-addon">
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </div>
+                    </div>
+
+                </div>
+                <input type="submit" value="{{ button_login }}" class="btn btn-login"/>
+                {% if redirect %}
+                    <input type="hidden" name="redirect" value="{{ redirect }}"/>
+                {% endif %}
+            </form>
+        </div>
+    </section>
+
+</main>
+<script>
+    $(document).ready(function () {
+        $('body').addClass('login');
+    });
+</script>

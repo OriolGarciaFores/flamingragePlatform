@@ -7891,7 +7891,7 @@ NAVIGATION
   padding: 0;
 }
 
-.last-posts .col-xs-12 .img-thumbnail-* {
+.last-posts .col-xs-12 .img-thumbnail- * {
   padding: 0;
   width: 100%;
 }
@@ -8110,6 +8110,93 @@ footer .title-logo {
   -moz-transform: scale(1.2);
   transition: all 0.4s ease-in;
   transform: scale(1.2);
+}
+
+/*
+  ========================================
+  LOGIN
+  ========================================
+*/
+.login {
+  background: url(../../../../../image/catalog/fondo.jpg) no-repeat center top fixed;
+}
+
+.login #account-login h1 {
+  color: #FFFFE7;
+}
+
+.login #account-login .box-login {
+  margin-top: 80px;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 400px;
+}
+
+.login #account-login .box-login form {
+  margin-top: 77px;
+}
+
+.login #account-login .box-login form label {
+  color: #FFFFE7;
+}
+
+.login #account-login .box-login form .input-group input {
+  height: 50px;
+  background: transparent;
+  border-right: 0;
+  border-color: #FFFFE7;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  color: #fffa90;
+  letter-spacing: 1px;
+}
+
+.login #account-login .box-login form .input-group input:focus {
+  border-color: #FFFFE7;
+  box-shadow: none;
+  color: #fffa90;
+}
+
+.login #account-login .box-login form .input-group .input-group-addon {
+  background: transparent;
+  border-color: #FFFFE7;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  color: #FFFFE7;
+}
+
+.login #account-login .box-login form .btn-login {
+  height: 50px;
+  width: 100%;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  background: rgba(255, 255, 231, 0.3);
+  transition: all 0.4s ease-in;
+  border-color: #FFFFE7;
+  color: #FFFFE7;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.login #account-login .box-login form .btn-login:focus {
+  border-color: #FFFFE7;
+  box-shadow: none;
+  background-color: #000000;
+}
+
+.login #account-login .box-login form .btn-login:hover {
+  transition: all 0.4s ease-in;
+  background-color: #000000;
+}
+
+.login #account-login .alert-danger {
+  background-color: rgba(246, 113, 113, 0.3);
+  color: #c19a99;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
 }
 
 /*
