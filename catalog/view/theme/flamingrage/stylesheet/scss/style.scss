@@ -243,7 +243,7 @@ NAVIGATION
 .row {
   .col-md-4 {
     .img-thumbnail {
-      background-color: $background-color;
+      background-color: #000000;
       border-radius: 0;
       border: none;
       padding: 0;
@@ -639,6 +639,37 @@ footer {
           }
         }
       }
+    }
+  }
+}
+
+#common-success{
+  h1{
+    color: $titles;
+    text-transform: uppercase;
+  }
+  p{
+    color: green;
+  }
+  .btn-continue{
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    background:  rgba(255, 255, 231, 0.3);
+    -webkit-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    border-color: $titles;
+    color: $titles;
+    text-transform: uppercase;
+    font-weight: bold;
+    &:hover{
+      -webkit-transition: all 0.4s ease-in;
+      -ms-transition: all 0.4s ease-in;
+      -moz-transition: all 0.4s ease-in;
+      transition: all 0.4s ease-in;
+      background-color: #000000;
     }
   }
 }

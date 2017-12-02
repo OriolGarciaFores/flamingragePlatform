@@ -7897,7 +7897,7 @@ NAVIGATION
 }
 
 .row .col-md-4 .img-thumbnail {
-  background-color: #3a3e3e;
+  background-color: #000000;
   border-radius: 0;
   border: none;
   padding: 0;
@@ -8262,6 +8262,32 @@ footer .title-logo {
 }
 
 .contact #information-contact .box-contact form .btn-send:hover {
+  transition: all 0.4s ease-in;
+  background-color: #000000;
+}
+
+#common-success h1 {
+  color: #FFFFE7;
+  text-transform: uppercase;
+}
+
+#common-success p {
+  color: green;
+}
+
+#common-success .btn-continue {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  background: rgba(255, 255, 231, 0.3);
+  transition: all 0.4s ease-in;
+  border-color: #FFFFE7;
+  color: #FFFFE7;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#common-success .btn-continue:hover {
   transition: all 0.4s ease-in;
   background-color: #000000;
 }
