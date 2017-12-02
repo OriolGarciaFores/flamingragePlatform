@@ -491,6 +491,7 @@ footer {
 
     .box-login {
       margin-top: 80px;
+      margin-bottom: 180px;
       background-color: rgba(0, 0, 0, 0.5);
       min-height: 400px;
 
@@ -573,6 +574,74 @@ footer {
   }
 }
 
+/*
+  ========================================
+  CONTACT
+  ========================================
+*/
+.contact{
+  background: url(../../../../../image/catalog/fondo.jpg) no-repeat center top fixed;
+
+  #information-contact{
+    h1{
+      color: $titles;
+      text-transform: uppercase;
+    }
+    .box-contact{
+      margin-top: 80px;
+      margin-bottom: 180px;
+      background-color: rgba(0, 0, 0, 0.5);
+      min-height: 600px;
+      form{
+        margin-top: 50px;
+        input, textarea{
+          background: transparent;
+          border-color: $titles;
+          border-radius: 0;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          color: #fffa90;
+          letter-spacing: 1px;
+
+        }
+        input{
+          height: 50px;
+        }
+        textarea{
+          resize: vertical;
+        }
+
+        label{
+          color:$titles;
+        }
+
+        .btn-send{
+          width: 100%;
+          height: 50px;
+          border-radius: 0;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          background:  rgba(255, 255, 231, 0.3);
+          -webkit-transition: all 0.4s ease-in;
+          -ms-transition: all 0.4s ease-in;
+          -moz-transition: all 0.4s ease-in;
+          transition: all 0.4s ease-in;
+          border-color: $titles;
+          color: $titles;
+          text-transform: uppercase;
+          font-weight: bold;
+          &:hover{
+            -webkit-transition: all 0.4s ease-in;
+            -ms-transition: all 0.4s ease-in;
+            -moz-transition: all 0.4s ease-in;
+            transition: all 0.4s ease-in;
+            background-color: #000000;
+          }
+        }
+      }
+    }
+  }
+}
 /*
   ========================================
   MEDIA QUERIES

@@ -8127,6 +8127,7 @@ footer .title-logo {
 
 .login #account-login .box-login {
   margin-top: 80px;
+  margin-bottom: 180px;
   background-color: rgba(0, 0, 0, 0.5);
   min-height: 400px;
 }
@@ -8197,6 +8198,72 @@ footer .title-logo {
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
+}
+
+/*
+  ========================================
+  CONTACT
+  ========================================
+*/
+.contact {
+  background: url(../../../../../image/catalog/fondo.jpg) no-repeat center top fixed;
+}
+
+.contact #information-contact h1 {
+  color: #FFFFE7;
+  text-transform: uppercase;
+}
+
+.contact #information-contact .box-contact {
+  margin-top: 80px;
+  margin-bottom: 180px;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 600px;
+}
+
+.contact #information-contact .box-contact form {
+  margin-top: 50px;
+}
+
+.contact #information-contact .box-contact form input, .contact #information-contact .box-contact form textarea {
+  background: transparent;
+  border-color: #FFFFE7;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  color: #fffa90;
+  letter-spacing: 1px;
+}
+
+.contact #information-contact .box-contact form input {
+  height: 50px;
+}
+
+.contact #information-contact .box-contact form textarea {
+  resize: vertical;
+}
+
+.contact #information-contact .box-contact form label {
+  color: #FFFFE7;
+}
+
+.contact #information-contact .box-contact form .btn-send {
+  width: 100%;
+  height: 50px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  background: rgba(255, 255, 231, 0.3);
+  transition: all 0.4s ease-in;
+  border-color: #FFFFE7;
+  color: #FFFFE7;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.contact #information-contact .box-contact form .btn-send:hover {
+  transition: all 0.4s ease-in;
+  background-color: #000000;
 }
 
 /*
