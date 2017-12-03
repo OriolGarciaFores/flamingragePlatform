@@ -6,7 +6,7 @@
     <!-- ULTIMOS CAMBIOS -->
 
     <section class="last-posts row">
-        <header><h2 class="text-center">Ultimos cambios</h2></header>
+        <header><h2 class="text-center">Ultimos Articulos</h2></header>
         {% set i = 0 %}
         {% for category in categories %}
             {% if i < 6 %}
@@ -44,6 +44,7 @@
 
     <section class="row">
         <header><h2 class="text-center">Videos de la comunidad</h2></header>
+        <hr>
         <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="img-thumbnail">
                 <iframe src="https://www.youtube.com/embed/9SygUTwLeAM" allowfullscreen frameborder="0"></iframe>
@@ -56,7 +57,7 @@
             <div class="img-thumbnail">
                 <iframe src="https://www.youtube.com/embed/CLjXHuLGDiE" allowfullscreen frameborder="0"></iframe>
                 <div class="caption text-center">
-                    <p> League of Legends 5 Leonas vs 5 Kassadins</p>
+                    <p> League of Legends Leonas vs Kassadins</p>
                 </div>
             </div>
         </div>
@@ -95,6 +96,10 @@
     </section>
 
     <!-- END LIST VIDEOS -->
+<section class="last-change">
+    <h2 class="text-center">ULTIMOS CAMBIOS</h2>
+    {{ content_bottom }}
+</section>
 
 </main>
 {{ footer }}

@@ -23,6 +23,35 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-color: #0d0d0f;
+
+  .date{
+    margin-top: 10px;
+    @include font-size(20px);
+  }
+
+  a{
+    h2{
+      text-decoration: none;
+      color:$titles;
+      &:hover{
+        color:$color-brown;
+      }
+    }
+    &:hover, &:focus{
+      text-decoration: none;
+    }
+  }
+
+  .description{
+    line-height: 1.4;
+    @include font-size(14px);
+    margin: 0 13px 10px;
+  }
+
+  hr{
+    width: 15%;
+    border-color: $titles;
+  }
 }
 
 /*
@@ -200,11 +229,13 @@ NAVIGATION
 
 /*
   ========================================
-  VIDEO CARDS
+  CARDS
   ========================================
 */
 
 .last-posts {
+  background: url(../../../../../image/catalog/Home/background-last-posts.jpg) left;
+  background-size: cover;
   h2 {
     color: $titles;
   }
@@ -222,11 +253,9 @@ NAVIGATION
         }
       }
     }
-    .img-thumbnail-1 {
-      background: url("http://silviahartmann.com/background-tile-art/images/black_pattern_tile.jpg") repeat;
-    }
     .img-thumbnail-2 {
-      background: url("https://wallpapercave.com/wp/K0HCxt0.jpg") repeat;
+      background: url("https://wallpapercave.com/wp/K0HCxt0.jpg");
+      background-size: cover;
     }
   }
 
@@ -238,6 +267,32 @@ NAVIGATION
     }
   }
 
+}
+
+.last-change{
+  background: url(../../../../../image/catalog/Home/background-last-posts.jpg);
+  background-size: cover;
+
+  h2{
+    padding-top: 15px;
+  }
+
+  p, li{
+    color: $text-color;
+  }
+
+  h2 {
+    color: $titles;
+  }
+
+  .bg-1{
+    background: url("https://wallpapercave.com/wp/K0HCxt0.jpg");
+    background-size: cover;
+  }
+  article{
+    margin: 20px;
+    padding: 10px 0;
+  }
 }
 
 .row {
@@ -360,6 +415,12 @@ footer {
     width: 450px;
   }
 
+  .img-rotate{
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+  }
+
 }
 
 /*
@@ -372,6 +433,9 @@ footer {
   .img-thumbnail {
     height: 500px;
     background: url("http://silviahartmann.com/background-tile-art/images/black_pattern_tile.jpg") repeat;
+    p{
+      color: $text-color;
+    }
   }
 }
 
