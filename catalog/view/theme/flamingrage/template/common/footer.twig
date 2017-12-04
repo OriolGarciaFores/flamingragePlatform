@@ -120,5 +120,21 @@
             });
         });
     </script>
+    <script>
+        /*
+         * Open the drawer when the menu icon is clicked.
+         */
+        var menu = document.querySelector('#menuIcon');
+        var main = document.querySelector('main');
+        var drawer = document.querySelector('#drawer');
+
+        menu.addEventListener('click', function (e) {
+            drawer.classList.toggle('open');
+            e.stopPropagation();
+        });
+        main.addEventListener('click', function () {
+            drawer.classList.remove('open');
+        });
+    </script>
    <!-- <script type="text/javascript" src="catalog/view/theme/flamingrage/javascript/snow.js"></script>-->
 </footer>

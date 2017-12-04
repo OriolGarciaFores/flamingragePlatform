@@ -8075,6 +8075,10 @@ footer .img-rotate {
   transform: rotate(180deg);
 }
 
+footer hr {
+  width: 100%;
+}
+
 /*
   ========================================
   CATEGORY
@@ -8123,6 +8127,27 @@ footer .img-rotate {
 
 #article a img {
   margin: 0 auto;
+}
+
+#article .panel-spoiler {
+  color: #FFFFE7;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-color: #FFFFE7;
+}
+
+#article .panel-spoiler a {
+  display: block;
+}
+
+#article .panel-spoiler .panel-body {
+  border-color: #FFFFE7;
+}
+
+#article .panel-spoiler .panel-body p {
+  color: #FFFFE7;
 }
 
 /*
@@ -8368,7 +8393,7 @@ footer .img-rotate {
   MEDIA QUERIES
   ========================================
 */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 938px) {
   #menuIcon {
     position: absolute;
     top: 0;
@@ -8383,7 +8408,7 @@ footer .img-rotate {
     height: 100%;
     background-color: darkslategray;
     position: fixed;
-    width: 12.5em;
+    width: 14.5em;
     /*200px*/
     padding: 0 1em;
     top: 0;
@@ -8409,6 +8434,12 @@ footer .img-rotate {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -o-transform: translate(0, 0);
+  }
+  #cssmenu .pull-left {
+    float: none !important;
+  }
+  #cssmenu .pull-right {
+    float: none !important;
   }
   #cssmenu .nav__item {
     display: block;

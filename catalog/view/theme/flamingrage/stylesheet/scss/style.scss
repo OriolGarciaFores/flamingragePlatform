@@ -421,6 +421,10 @@ footer {
     transform: rotate(180deg);
   }
 
+  hr{
+  width: 100%;
+  }
+
 }
 
 /*
@@ -474,6 +478,24 @@ footer {
   a {
     img {
       margin: 0 auto;
+    }
+  }
+
+  .panel-spoiler{
+    color: $titles;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    background:  rgba(0, 0, 0, 0.5);
+    border-color: $titles;
+    a{
+      display: block;
+    }
+    .panel-body{
+      border-color: $titles;
+      p{
+        color: $titles;
+      }
     }
   }
 }
@@ -743,7 +765,7 @@ footer {
   ========================================
 */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 938px) {
   #menuIcon {
     position: absolute;
     top: 0;
@@ -758,7 +780,7 @@ footer {
     height: 100%;
     background-color: darkslategray;
     position: fixed;
-    width: 12.5em; /*200px*/
+    width: 14.5em; /*200px*/
     padding: 0 1em;
     top: 0;
     transform: translate(-15em, 0); /*Moves the drawer off canvas*/
@@ -784,6 +806,12 @@ footer {
   }
 
   #cssmenu {
+    .pull-left{
+      float: none !important;
+    }
+    .pull-right{
+      float:none !important;
+    }
     .nav__item {
       display: block;
       a {

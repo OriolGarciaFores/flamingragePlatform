@@ -24,6 +24,14 @@ class ControllerContentsArticle extends Controller{
 
         if(isset($category_info) && !empty($category_info)){
             $data = $category_info;
+
+
+            if($this->customer->isLogged()){
+                $data['isLogged'] = true;
+            }else{
+                $data['isLogged'] = false;
+            }
+
             $data['content_top'] = $this->load->controller('common/content_top');
             $data['footer'] = $this->load->controller('common/footer');
             $data['header'] = $this->load->controller('common/header');
