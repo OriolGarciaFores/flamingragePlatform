@@ -6,7 +6,7 @@
     <!-- ULTIMOS CAMBIOS -->
 
     <section class="last-posts row">
-        <header><h2 class="text-center">Ultimos Articulos</h2></header>
+        <header><h2 class="text-center">{{ text_article }}</h2></header>
         {% set i = 0 %}
         {% for category in categories %}
             {% if i < 6 %}
@@ -43,7 +43,7 @@
     <!-- LIST VIDEOS -->
 
     <section class="row">
-        <header><h2 class="text-center">Videos de la comunidad</h2></header>
+        <header><h2 class="text-center">{{ text_films }}</h2></header>
         <hr>
         <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="img-thumbnail">
@@ -97,7 +97,7 @@
 
     <!-- END LIST VIDEOS -->
 <section class="last-change">
-    <h2 class="text-center">ULTIMOS CAMBIOS</h2>
+    <h2 class="text-center">{{ text_last_change }}</h2>
     {{ content_bottom }}
 </section>
 

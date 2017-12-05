@@ -19,6 +19,9 @@ $_['text_all_zones']        = 'All Zones';
 $_['text_pagination']       = 'Showing %d to %d of %d (%d Pages)';
 $_['text_loading']          = 'Loading...';
 $_['text_no_results']       = 'No results!';
+$_['text_article']          = 'Últimos Artículos';
+$_['text_films']            = 'Videos de la comunidad';
+$_['text_last_change']      = 'ÚLTIMOS CAMBIOS';
 
 // Buttons
 $_['button_address_add']    = 'Add Address';
@@ -100,11 +103,11 @@ $_['error_curl']            = 'CURL: Error Code(%s): %s';
 //$_['datepicker']            = 'el';
 //$_['datepicker']            = 'en-au';
 //$_['datepicker']            = 'en-ca';
-$_['datepicker']            = 'en-gb';
+//$_['datepicker']            = 'en-gb';
 //$_['datepicker']            = 'en-ie';
 //$_['datepicker']            = 'en-nz';
 //$_['datepicker']            = 'eo';
-//$_['datepicker']            = 'es-do';
+$_['datepicker']            = 'es-do';
 //$_['datepicker']            = 'es';
 //$_['datepicker']            = 'et';
 //$_['datepicker']            = 'eu';
