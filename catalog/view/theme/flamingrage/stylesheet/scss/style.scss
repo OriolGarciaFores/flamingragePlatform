@@ -759,6 +759,20 @@ footer {
     }
   }
 }
+
+/*
+  ========================================
+  MAINTENANCE
+  ========================================
+*/
+
+.maintenance{
+  background: url(../../../../../image/catalog/fondo.jpg) no-repeat center top fixed;
+  color:$titles;
+  .img-centrar {
+    margin: 0 auto;
+  }
+}
 /*
   ========================================
   MEDIA QUERIES

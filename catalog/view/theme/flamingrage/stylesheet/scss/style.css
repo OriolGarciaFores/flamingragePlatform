@@ -8390,6 +8390,20 @@ footer hr {
 
 /*
   ========================================
+  MAINTENANCE
+  ========================================
+*/
+.maintenance {
+  background: url(../../../../../image/catalog/fondo.jpg) no-repeat center top fixed;
+  color: #FFFFE7;
+}
+
+.maintenance .img-centrar {
+  margin: 0 auto;
+}
+
+/*
+  ========================================
   MEDIA QUERIES
   ========================================
 */
