@@ -62,9 +62,9 @@
     </div>
     <nav id="drawer">
         <ul id="cssmenu">
-            <li class=" pull-left nav__item"><a>IDIOMAS</a></li>
+           <!-- <li class=" pull-left nav__item"><a>IDIOMAS</a></li>-->
 
-            <li class="nav__item"><a href="{{ home }}">INICIO</a></li>
+            <li class="nav__item"><a href="{{ home }}">{{ text_home }}</a></li>
             {% for category in categories %}
                 <li class="nav__item"><a href="{{ category.href }}">{{ category.name }}</a></li>
             {% endfor %}
