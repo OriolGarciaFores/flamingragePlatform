@@ -21,6 +21,16 @@ class ControllerCommonMaintenance extends Controller {
 		);
 
 		$data['message'] = $this->language->get('text_message');
+        $this->load->model('design/banner');
+        $this->load->model('setting/module');
+        $modules = $this->model_design_banner->getBanner(7);
+        $this->load->model('tool/image');
+
+        if ($modules) {
+            $data['title_img'] = $this->model_tool_image->resize($modules[0]['image'], 0, 0);
+        } else {
+            $data['title_img'] = '';
+        }
 
 		$data['header'] = $this->load->controller('common/header');
 		$data['footer'] = $this->load->controller('common/footer');
