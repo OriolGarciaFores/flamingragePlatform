@@ -3,40 +3,40 @@
     <div class="container">
         <div class="hidden-xs">
             <div class="row">
-                <h5 class="col-xs-4"><strong>QUIÉNES SOMOS</strong></h5>
-                <h5 class="col-xs-4"><strong>SITIOS DE INTERES</strong></h5>
-                <h5 class="col-xs-4"><strong>CONTACTAR</strong></h5>
+                <h5 class="col-xs-4"><strong>{{ text_about_us }}</strong></h5>
+                <h5 class="col-xs-4"><strong>{{ text_interesting_sites }}</strong></h5>
+                <h5 class="col-xs-4"><strong>{{ text_contact }}</strong></h5>
             </div>
             <div class="row">
-                <p class="col-xs-4"><a href="{{ information }}">Sobre la web</a></p>
+                <p class="col-xs-4"><a href="{{ information }}">{{ text_about_web }}</a></p>
                 <p class="col-xs-4"><a href="https://elchapuzasinformatico.com/" target="blank">Chapuzas informatico</a>
                 </p>
                 <p class="col-xs-4"><a href="{{ contact }}">Centro de soporte</a></p>
             </div>
             <div class="row">
-                <p class="col-xs-4"><a href="{{ team }}">Equipo</a></p>
+                <p class="col-xs-4"><a href="{{ team }}">{{ text_team }}</a></p>
                 <p class="col-xs-4"><a href="http://www.3djuegos.com/novedades/noticias/juegos/0f0f0f0/fecha/"
                                        target="blank">3D Juegos</a></p>
             </div>
             <div class="row">
                 <p class="col-xs-4"><a
                             href='https://drive.google.com/file/d/0B5KROJmqTZaiVUVxMTU0ekRMUkE/edit?usp=sharing'
-                            target="_blank">Normativa</a></p>
-                <p class="col-xs-4"><a href='http://animeflv.net/' target="_blank">Anime FLV</a></p>
+                            target="_blank">{{ text_rules }}</a></p>
+                <p class="col-xs-4"><a href='http://animeflv.net/' target="_blank">AnimeFLV</a></p>
             </div>
         </div>
         <div class="visible-xs">
             <div class="row">
-                <h5 class="col-xs-12"><strong>QUIÉNES SOMOS</strong><span class="glyphicon glyphicon-plus pull-right"
+                <h5 class="col-xs-12"><strong>{{ text_about_us }}</strong><span class="glyphicon glyphicon-plus pull-right"
                                                                           id="who"></span></h5>
                 <div id="panel_who">
-                    <p class="col-xs-12"><a href="{{ information }}">Sobre la web</a></p>
-                    <p class="col-xs-12"><a href="{{ team }}">Equipo</a></p>
+                    <p class="col-xs-12"><a href="{{ information }}">{{ text_about_web }}</a></p>
+                    <p class="col-xs-12"><a href="{{ team }}">{{ text_team }}</a></p>
                     <p class="col-xs-12"><a
                                 href='https://drive.google.com/file/d/0B5KROJmqTZaiVUVxMTU0ekRMUkE/edit?usp=sharing'
-                                target="_blank">Normativa</a></p>
+                                target="_blank">{{ text_rules }}</a></p>
                 </div>
-                <h5 class="col-xs-12"><strong>SITIOS DE INTERES</strong><span
+                <h5 class="col-xs-12"><strong>{{ text_interesting_sites }}</strong><span
                             class="glyphicon glyphicon-plus pull-right" id="websites"></span></h5>
                 <div id="panel_websites">
                     <p class="col-xs-12"><a href="https://elchapuzasinformatico.com/" target="blank">Chapuzas
@@ -45,10 +45,10 @@
                                             target="blank">3D Juegos</a></p>
                     <p class="col-xs-12"><a href='http://animeflv.net/' target="_blank">Anime FLV</a></p>
                 </div>
-                <h5 class="col-xs-12"><strong>CONTACTAR</strong><span class="glyphicon glyphicon-plus pull-right"
+                <h5 class="col-xs-12"><strong>{{ text_contact }}</strong><span class="glyphicon glyphicon-plus pull-right"
                                                                       id="contact"></span></h5>
                 <div id="panel_contact">
-                    <p class="col-xs-12"><a href="{{ contact }}">Centro de soporte</a></p>
+                    <p class="col-xs-12"><a href="{{ contact }}">{{ text_support }}</a></p>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
         <div class="row">
             <div class="col-xs-offset-3 col-xs-offset-footer">
                 <p class="col-xs-2"><a href="https://www.facebook.com/groups/465723736814961/" target="blank"><img
-                                class="img-responsive" alt="facebook" src="Imagenes/facebook.png"></a></p>
+                                class="img-responsive" alt="facebook" src="http://www.autismo.org.es/sites/all/modules/service_links/images/facebook.png"></a></p>
                 <p class="col-xs-2"><a href="https://twitter.com/OriolTebra" target="blank">
                         <img class="img-responsive" alt="facebook"
                              src="http://www.upmc.fr/skins/UPMC/resources/img/logo32-twitter.png">
@@ -77,7 +77,7 @@
         </div>
 
             <img class="img-responsive img-centrar title-logo" alt="titulo" src={{ title_img }}>
-        <p class="text-center">@2012 PRIVACY POLICY</p>
+        <p class="text-center">@2010 PRIVACY POLICY</p>
             <img class="img-responsive img-centrar img-rotate" alt="header" src={{ img_header }}>
 
 
