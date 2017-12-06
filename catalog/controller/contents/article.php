@@ -2,6 +2,7 @@
 class ControllerContentsArticle extends Controller{
     public function index()
     {
+        $this->load->language('contents/article');
         $this->load->model('catalog/category');
         $this->load->model('tool/image');
 

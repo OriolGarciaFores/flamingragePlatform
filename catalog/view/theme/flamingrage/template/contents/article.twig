@@ -3,8 +3,8 @@
     <section>
         <header><h1 class="text-center">{{ title }}</h1></header>
         {% if isLogged == false %}
-            <header><h2>DESCARGAS:</h2></header>
-            <p>Necesitas iniciar sesión para poder descargar contenido.</p>
+            <header><h2>{{ text_title_download }}</h2></header>
+            <p>{{ text_condition }}</p>
         {% endif %}
       {{ content_top }}
     </section>
