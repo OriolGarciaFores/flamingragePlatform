@@ -8113,6 +8113,7 @@ footer hr {
 }
 
 #article h2 {
+  color: #FFFFE7;
   font-size: 27px;
   font-size: 1.6875rem;
 }
@@ -8126,6 +8127,23 @@ footer hr {
 }
 
 #article a img {
+  margin: 0 auto;
+}
+
+#article li {
+  list-style-type: circle;
+  color: #535353;
+}
+
+#article li.list-number {
+  list-style-type: decimal;
+}
+
+#article li .letra-verde {
+  color: green;
+}
+
+#article .img-centrar {
   margin: 0 auto;
 }
 

@@ -467,6 +467,7 @@ footer {
     color: $titles;
   }
   h2 {
+    color: $titles;
     @include font-size(27px);
   }
   p {
@@ -479,6 +480,20 @@ footer {
     img {
       margin: 0 auto;
     }
+  }
+
+  li{
+    list-style-type: circle;
+    color: $text-color;
+    &.list-number{
+      list-style-type: decimal;
+    }
+    .letra-verde {
+      color: green; }
+  }
+
+  .img-centrar {
+    margin: 0 auto;
   }
 
   .panel-spoiler{
