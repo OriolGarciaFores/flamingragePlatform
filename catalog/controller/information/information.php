@@ -45,29 +45,7 @@ class ControllerInformationInformation extends Controller {
 
             $this->response->setOutput($this->load->view('information/information', $data));
         } else {
-            $data['breadcrumbs'][] = array(
-                'text' => $this->language->get('text_error'),
-                'href' => $this->url->link('information/information', 'information_id=' . $information_id)
-            );
-
-            $this->document->setTitle($this->language->get('text_error'));
-
-            $data['heading_title'] = $this->language->get('text_error');
-
-            $data['text_error'] = $this->language->get('text_error');
-
-            $data['continue'] = $this->url->link('common/home');
-
-            $this->response->addHeader($this->request->server['SERVER_PROTOCOL'] . ' 404 Not Found');
-
-            $data['column_left'] = $this->load->controller('common/column_left');
-            $data['column_right'] = $this->load->controller('common/column_right');
-            $data['content_top'] = $this->load->controller('common/content_top');
-            $data['content_bottom'] = $this->load->controller('common/content_bottom');
-            $data['footer'] = $this->load->controller('common/footer');
-            $data['header'] = $this->load->controller('common/header');
-
-            $this->response->setOutput($this->load->view('error/not_found', $data));
+            $this->response->redirect($this->url->link('error/not_found'));
         }
     }
 

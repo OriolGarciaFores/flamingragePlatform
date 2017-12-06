@@ -31,12 +31,7 @@ class ControllerContentsCategory extends Controller{
 
             $this->response->setOutput($this->load->view('contents/category', $data));
         }else{
-
-            $this->load->language('error/not_found');
-            $data = $this->load->controller('error/not_found');
-            $this->response->addHeader($this->request->server['SERVER_PROTOCOL'] . ' 404 Not Found');
-
-            $this->response->setOutput($this->load->view('error/not_found', $data));
+            $this->response->redirect($this->url->link('error/not_found'));
         }
 
     }
