@@ -788,6 +788,25 @@ footer {
     margin: 0 auto;
   }
 }
+
+/*
+  ========================================
+  NOT FOUND
+  ========================================
+*/
+
+#error-not-found{
+  h1{
+    @include font-size(100px);
+    color: $titles;
+    font-weight: bold;
+  }
+  p{
+    color: $text-color;
+    @include font-size(22px);
+  }
+}
+
 /*
   ========================================
   MEDIA QUERIES
