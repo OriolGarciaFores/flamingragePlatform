@@ -1,8 +1,8 @@
 {{ header }}
 <main id="article" class="container">
     <section>
-        <header><h1 class="text-center">{{ title }}</h1></header>
-        {% if isLogged == false %}
+        <header><h1 class="text-center">{{ category.name }}</h1></header>
+        {% if isLogged == false and name_parent == false %}
             <header><h2>{{ text_title_download }}</h2></header>
             <p>{{ text_condition }}</p>
         {% endif %}

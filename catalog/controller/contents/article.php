@@ -26,6 +26,11 @@ class ControllerContentsArticle extends Controller{
         if(isset($category_info) && !empty($category_info)){
             $data = $category_info;
 
+            $parent = $this->model_catalog_category->getCategory($data['category']['parent_id']);
+
+            if(isset($parent) &&  $parent['name'] == 'PROYECTOS'){
+            $data['name_parent'] = $parent['name'];
+            }
 
             if($this->customer->isLogged()){
                 $data['isLogged'] = true;
@@ -52,16 +57,16 @@ class ControllerContentsArticle extends Controller{
     private function getArticleInfo($category_id){
 
         if(isset($category_id) && !empty($category_id)){
-            $data['title'] = $this->model_catalog_category->getCategory($category_id)['name'];
+            $data['category'] = $this->model_catalog_category->getCategory($category_id);
             $data['categories'] = $this->model_catalog_category->getCategories($category_id);
 
-            if(!isset($data['title']))
+            if(!isset($data['category']['name']))
             {
                 return false;
             }
 
             foreach ($data['categories'] as $key => $category){
-                $data['categories'][$key]['description'] = isset($category['description']) ? html_entity_decode(substr($category['description'], 0, 500)) : '';
+                $data['categories'][$key]['description'] = isset($category['description']) ? html_entity_decode(substr($category['description'], 0, 5000)) : '';
 
                 if (isset($category['image']) && !empty($category['image'])) {
                     $data['categories'][$key]['image'] = $this->model_tool_image->resize($category['image'], 0, 0);
