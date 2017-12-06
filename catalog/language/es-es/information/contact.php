@@ -1,28 +1,20 @@
 <?php
 // Heading
-$_['heading_title']  = 'Contact Us';
+$_['heading_title']  = 'CONTACTAR';
 
 // Text
-$_['text_location']  = 'Our Location';
-$_['text_store']     = 'Our Stores';
-$_['text_contact']   = 'Contact Form';
-$_['text_address']   = 'Address';
-$_['text_telephone'] = 'Telephone';
-$_['text_fax']       = 'Fax';
-$_['text_open']      = 'Opening Times';
-$_['text_comment']   = 'Comments';
 $_['text_success']   = '<p>Your enquiry has been successfully sent to the store owner!</p>';
 $_['text_message']   = '<p>Tu mensaje ha sido enviado correctamente.</p>';
 
 // Entry
-$_['entry_name']     = 'Your Name';
-$_['entry_email']    = 'E-Mail Address';
-$_['entry_enquiry']  = 'Enquiry';
+$_['entry_name']     = 'Tu Nombre';
+$_['entry_email']    = 'Correo Electronico';
+$_['entry_enquiry']  = 'Texto';
 
-// Email
-$_['email_subject']  = 'Enquiry %s';
 
 // Errors
-$_['error_name']     = 'Name must be between 3 and 32 characters!';
-$_['error_email']    = 'E-Mail Address does not appear to be valid!';
-$_['error_enquiry']  = 'Enquiry must be between 10 and 3000 characters!';
+$_['error_name']     = 'El nombre tiene que contener entre 3 y 32 caracteres.';
+$_['error_email']    = 'El correo electronico no és valido.';
+$_['error_enquiry']  = 'El texto tiene que contener entre 10 y 3000 caracteres.';
+
+$_['button_submit'] = "ENVIAR";
