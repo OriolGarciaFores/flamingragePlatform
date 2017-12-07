@@ -548,13 +548,13 @@ class ControllerSettingStore extends Controller {
 
 		$data['informations'] = $this->model_catalog_information->getInformations();
 
-		if (isset($this->request->post['config_cart_weight'])) {
+	/*	if (isset($this->request->post['config_cart_weight'])) {
 			$data['config_cart_weight'] = $this->request->post['config_cart_weight'];
 		} elseif (isset($store_info['config_cart_weight'])) {
 			$data['config_cart_weight'] = $store_info['config_cart_weight'];
 		} else {
 			$data['config_cart_weight'] = '';
-		}
+		}*/
 
 		if (isset($this->request->post['config_checkout_guest'])) {
 			$data['config_checkout_guest'] = $this->request->post['config_checkout_guest'];

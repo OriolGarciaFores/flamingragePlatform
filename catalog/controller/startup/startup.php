@@ -111,7 +111,7 @@ class ControllerStartupStartup extends Controller {
 		// Customer
 		$customer = new Cart\Customer($this->registry);
 		$this->registry->set('customer', $customer);
-		
+
 		// Customer Group
 		if (isset($this->session->data['customer']) && isset($this->session->data['customer']['customer_group_id'])) {
 			// For API calls
@@ -124,11 +124,11 @@ class ControllerStartupStartup extends Controller {
 		}
 		
 		// Tracking Code
-		if (isset($this->request->get['tracking'])) {
+	/*	if (isset($this->request->get['tracking'])) {
 			setcookie('tracking', $this->request->get['tracking'], time() + 3600 * 24 * 1000, '/');
 		
 			$this->db->query("UPDATE `" . DB_PREFIX . "marketing` SET clicks = (clicks + 1) WHERE code = '" . $this->db->escape($this->request->get['tracking']) . "'");
-		}		
+		}		*/
 		
 		// Currency
 		$code = '';
@@ -157,12 +157,12 @@ class ControllerStartupStartup extends Controller {
 			setcookie('currency', $code, time() + 60 * 60 * 24 * 30, '/', $this->request->server['HTTP_HOST']);
 		}		
 		
-		$this->registry->set('currency', new Cart\Currency($this->registry));
+		//$this->registry->set('currency', new Cart\Currency($this->registry));
 		
 		// Tax
-		$this->registry->set('tax', new Cart\Tax($this->registry));
+		/*$this->registry->set('tax', new Cart\Tax($this->registry));*/
 		
-		if (isset($this->session->data['shipping_address'])) {
+	/*	if (isset($this->session->data['shipping_address'])) {
 			$this->tax->setShippingAddress($this->session->data['shipping_address']['country_id'], $this->session->data['shipping_address']['zone_id']);
 		} elseif ($this->config->get('config_tax_default') == 'shipping') {
 			$this->tax->setShippingAddress($this->config->get('config_country_id'), $this->config->get('config_zone_id'));
@@ -174,17 +174,17 @@ class ControllerStartupStartup extends Controller {
 			$this->tax->setPaymentAddress($this->config->get('config_country_id'), $this->config->get('config_zone_id'));
 		}
 
-		$this->tax->setStoreAddress($this->config->get('config_country_id'), $this->config->get('config_zone_id'));
+		$this->tax->setStoreAddress($this->config->get('config_country_id'), $this->config->get('config_zone_id'));*/
 		
-		// Weight
+	/*	// Weight
 		$this->registry->set('weight', new Cart\Weight($this->registry));
 		
 		// Length
 		$this->registry->set('length', new Cart\Length($this->registry));
 		
 		// Cart
-		$this->registry->set('cart', new Cart\Cart($this->registry));
-		
+		$this->registry->set('cart', new Cart\Cart($this->registry));*/
+
 		// Encryption
 		$this->registry->set('encryption', new Encryption($this->config->get('config_encryption')));
 		
