@@ -453,7 +453,7 @@ class ControllerCommonColumnLeft extends Controller {
 				);
 			}
 			
-			if ($this->user->hasPermission('access', 'localisation/stock_status')) {
+			/*if ($this->user->hasPermission('access', 'localisation/stock_status')) {
 				$localisation[] = array(
 					'name'	   => $this->language->get('text_stock_status'),
 					'href'     => $this->url->link('localisation/stock_status', 'user_token=' . $this->session->data['user_token'], true),
@@ -467,7 +467,7 @@ class ControllerCommonColumnLeft extends Controller {
 					'href'     => $this->url->link('localisation/order_status', 'user_token=' . $this->session->data['user_token'], true),
 					'children' => array()		
 				);
-			}
+			}*/
 			
 			// Returns
 		/*	$return = array();
@@ -662,7 +662,7 @@ class ControllerCommonColumnLeft extends Controller {
 			);	
 			
 			// Stats
-			$this->load->model('sale/order');
+			/*$this->load->model('sale/order');
 	
 			$order_total = $this->model_sale_order->getTotalOrders();
 			
@@ -690,7 +690,7 @@ class ControllerCommonColumnLeft extends Controller {
 				$data['other_status'] = round(($other_total / $order_total) * 100);
 			} else {
 				$data['other_status'] = 0;
-			}
+			}*/
 			
 			return $this->load->view('common/column_left', $data);
 		}

@@ -509,11 +509,11 @@ class ControllerSettingSetting extends Controller {
 			$data['config_invoice_prefix'] = 'INV-' . date('Y') . '-00';
 		}
 
-		if (isset($this->request->post['config_order_status_id'])) {
+		/*if (isset($this->request->post['config_order_status_id'])) {
 			$data['config_order_status_id'] = $this->request->post['config_order_status_id'];
 		} else {
 			$data['config_order_status_id'] = $this->config->get('config_order_status_id');
-		}
+		}*/
 
 		if (isset($this->request->post['config_processing_status'])) {
 			$data['config_processing_status'] = $this->request->post['config_processing_status'];
@@ -537,9 +537,9 @@ class ControllerSettingSetting extends Controller {
 			$data['config_fraud_status_id'] = $this->config->get('config_fraud_status_id');
 		}
 
-		$this->load->model('localisation/order_status');
+	/*	$this->load->model('localisation/order_status');
 
-		$data['order_statuses'] = $this->model_localisation_order_status->getOrderStatuses();
+		$data['order_statuses'] = $this->model_localisation_order_status->getOrderStatuses();*/
 
 		if (isset($this->request->post['config_api_id'])) {
 			$data['config_api_id'] = $this->request->post['config_api_id'];
@@ -605,7 +605,7 @@ class ControllerSettingSetting extends Controller {
 			$data['config_affiliate_id'] = $this->config->get('config_affiliate_id');
 		}
 
-		if (isset($this->request->post['config_return_id'])) {
+		/*if (isset($this->request->post['config_return_id'])) {
 			$data['config_return_id'] = $this->request->post['config_return_id'];
 		} else {
 			$data['config_return_id'] = $this->config->get('config_return_id');
@@ -619,7 +619,7 @@ class ControllerSettingSetting extends Controller {
 
 		$this->load->model('localisation/return_status');
 
-		$data['return_statuses'] = $this->model_localisation_return_status->getReturnStatuses();
+		$data['return_statuses'] = $this->model_localisation_return_status->getReturnStatuses();*/
 
 		if (isset($this->request->post['config_captcha'])) {
 			$data['config_captcha'] = $this->request->post['config_captcha'];
@@ -932,13 +932,13 @@ class ControllerSettingSetting extends Controller {
 			$this->error['voucher_max'] = $this->language->get('error_voucher_max');
 		}
 
-		if (!isset($this->request->post['config_processing_status'])) {
+	/*	if (!isset($this->request->post['config_processing_status'])) {
 			$this->error['processing_status'] = $this->language->get('error_processing_status');
 		}
 
 		if (!isset($this->request->post['config_complete_status'])) {
 			$this->error['complete_status'] = $this->language->get('error_complete_status');
-		}
+		}*/
 		
 		if (!$this->request->post['config_error_filename']) {
 			$this->error['log'] = $this->language->get('error_log_required');

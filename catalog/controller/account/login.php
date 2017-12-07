@@ -5,42 +5,6 @@ class ControllerAccountLogin extends Controller {
 	public function index() {
 		$this->load->model('account/customer');
 
-		// Login override for admin users
-		if (!empty($this->request->get['token'])) {
-			$this->customer->logout();
-			$this->cart->clear();
-
-			unset($this->session->data['order_id']);
-			unset($this->session->data['payment_address']);
-			unset($this->session->data['payment_method']);
-			unset($this->session->data['payment_methods']);
-			unset($this->session->data['shipping_address']);
-			unset($this->session->data['shipping_method']);
-			unset($this->session->data['shipping_methods']);
-			unset($this->session->data['comment']);
-			unset($this->session->data['coupon']);
-			unset($this->session->data['reward']);
-			unset($this->session->data['voucher']);
-			unset($this->session->data['vouchers']);
-
-			$customer_info = $this->model_account_customer->getCustomerByToken($this->request->get['token']);
-
-			if ($customer_info && $this->customer->login($customer_info['email'], '', true)) {
-				// Default Addresses
-				$this->load->model('account/address');
-
-				if ($this->config->get('config_tax_customer') == 'payment') {
-					$this->session->data['payment_address'] = $this->model_account_address->getAddress($this->customer->getAddressId());
-				}
-
-				if ($this->config->get('config_tax_customer') == 'shipping') {
-					$this->session->data['shipping_address'] = $this->model_account_address->getAddress($this->customer->getAddressId());
-				}
-
-				$this->response->redirect($this->url->link('account/account', '', true));
-			}
-		}
-
 		if ($this->customer->isLogged()) {
 			$this->response->redirect($this->url->link('account/logout', '', true));
 		}
@@ -70,11 +34,6 @@ class ControllerAccountLogin extends Controller {
 		);
 
 		$data['breadcrumbs'][] = array(
-			'text' => $this->language->get('text_account'),
-			'href' => $this->url->link('account/account', '', true)
-		);
-
-		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_login'),
 			'href' => $this->url->link('account/login', '', true)
 		);
@@ -90,8 +49,8 @@ class ControllerAccountLogin extends Controller {
 		}
 
 		$data['action'] = $this->url->link('account/login', '', true);
-		$data['register'] = $this->url->link('account/register', '', true);
-		$data['forgotten'] = $this->url->link('account/forgotten', '', true);
+		//$data['register'] = $this->url->link('account/register', '', true);
+		//$data['forgotten'] = $this->url->link('account/forgotten', '', true);
 
 		// Added strpos check to pass McAfee PCI compliance test (http://forum.opencart.com/viewtopic.php?f=10&t=12043&p=151494#p151295)
 		if (isset($this->request->post['redirect']) && (strpos($this->request->post['redirect'], $this->config->get('config_url')) !== false || strpos($this->request->post['redirect'], $this->config->get('config_ssl')) !== false)) {
