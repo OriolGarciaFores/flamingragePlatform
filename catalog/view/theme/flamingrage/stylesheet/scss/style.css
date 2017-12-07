@@ -8430,6 +8430,7 @@ footer hr {
   font-size: 6.25rem;
   color: #FFFFE7;
   font-weight: bold;
+  display: inline-block;
 }
 
 #error-not-found p {

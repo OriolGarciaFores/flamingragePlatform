@@ -800,6 +800,7 @@ footer {
     @include font-size(100px);
     color: $titles;
     font-weight: bold;
+    display: inline-block;
   }
   p{
     color: $text-color;
