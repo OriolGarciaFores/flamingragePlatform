@@ -78,7 +78,6 @@ class ControllerCommonContentTop extends Controller
 
                if (!$this->customer->isLogged() && $parent['name'] == 'GUÍAS') {
                    $data['modules'][0] = "";
-                   dd('entro');
                }
            }
         }
