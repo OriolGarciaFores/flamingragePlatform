@@ -7907,6 +7907,17 @@ NAVIGATION
   border: none;
 }
 
+.last-posts .col-md-4 .img-thumbnail-1 img, .last-posts .col-md-4 .img-thumbnail-2 img {
+  max-height: 244px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .last-posts .col-md-4 .img-thumbnail-1 img, .last-posts .col-md-4 .img-thumbnail-2 img {
+    height: auto;
+  }
+}
+
 .last-posts .col-md-4 .img-thumbnail-1 .caption, .last-posts .col-md-4 .img-thumbnail-2 .caption {
   color: #FFFFE7;
 }
@@ -8091,6 +8102,17 @@ footer hr {
 
 #category .img-thumbnail p {
   color: #535353;
+}
+
+#category .img-thumbnail img {
+  max-height: 244px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #category .img-thumbnail img {
+    height: auto;
+  }
 }
 
 /*
@@ -8457,7 +8479,7 @@ footer hr {
   }
   nav {
     height: 100%;
-    background-color: darkslategray;
+    background: url("https://wallpapercave.com/wp/K0HCxt0.jpg") repeat center top;
     position: fixed;
     width: 14.5em;
     /*200px*/

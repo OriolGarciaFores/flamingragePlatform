@@ -246,6 +246,14 @@ NAVIGATION
       padding: 0;
       border-radius: 0;
       border: none;
+      img{
+        max-height: 244px;
+        width: 100%;
+        @include screen-sm(){
+          height: auto;
+        }
+      }
+
       .caption {
         color: $titles;
         p {
@@ -439,6 +447,13 @@ footer {
     background: url("http://silviahartmann.com/background-tile-art/images/black_pattern_tile.jpg") repeat;
     p{
       color: $text-color;
+    }
+    img{
+      max-height: 244px;
+      width: 100%;
+      @include screen-sm(){
+        height: auto;
+      }
     }
   }
 }
@@ -827,7 +842,7 @@ footer {
 
   nav {
     height: 100%;
-    background-color: darkslategray;
+    background: url("https://wallpapercave.com/wp/K0HCxt0.jpg") repeat center top;
     position: fixed;
     width: 14.5em; /*200px*/
     padding: 0 1em;
