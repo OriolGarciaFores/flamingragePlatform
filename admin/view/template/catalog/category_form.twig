@@ -158,6 +158,29 @@
                 </div>
               </div>
               <div class="form-group">
+                <label class="col-sm-2 control-label">{{ text_login_required }}</label>
+                <div class="col-sm-10">
+                  <label class="radio-inline">
+                      {% if login_required %}
+                        <input type="radio" name="login_required" value="1" checked="checked" />
+                          {{ text_yes }}
+                      {% else %}
+                        <input type="radio" name="login_required" value="1" />
+                          {{ text_yes }}
+                      {% endif %}
+                  </label>
+                  <label class="radio-inline">
+                      {% if not login_required %}
+                        <input type="radio" name="login_required" value="0" checked="checked" />
+                          {{ text_no }}
+                      {% else %}
+                        <input type="radio" name="login_required" value="0" />
+                          {{ text_no }}
+                      {% endif %}
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-status">{{ entry_status }}</label>
                 <div class="col-sm-10">
                   <select name="status" id="input-status" class="form-control">

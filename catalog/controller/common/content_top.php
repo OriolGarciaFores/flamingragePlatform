@@ -76,7 +76,7 @@ class ControllerCommonContentTop extends Controller
            if($category['parent_id']){
                $parent = $this->model_catalog_category->getCategory($category['parent_id']);
 
-               if (!$this->customer->isLogged() && $parent['name'] == 'GUÍAS') {
+               if (!$this->customer->isLogged() && $parent['name'] == 'GUÍAS' && $category['login_required']) {
                    $data['modules'][0] = "";
                }
            }

@@ -473,6 +473,14 @@ class ControllerCatalogCategory extends Controller {
 			$data['sort_order'] = 0;
 		}
 
+        if (isset($this->request->post['login_required'])) {
+            $data['login_required'] = $this->request->post['login_required'];
+        } elseif (!empty($category_info)) {
+            $data['login_required'] = $category_info['login_required'];
+        } else {
+            $data['login_required'] = 0;
+        }
+
 		if (isset($this->request->post['status'])) {
 			$data['status'] = $this->request->post['status'];
 		} elseif (!empty($category_info)) {
