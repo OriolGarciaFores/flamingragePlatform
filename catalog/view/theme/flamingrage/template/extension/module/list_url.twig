@@ -1,0 +1,14 @@
+<article class="row">
+<header><h2 class="text-center">{{ heading_title }}</h2></header>
+{% for url in list_urls %}
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="img-thumbnail ">
+            <iframe src="{{ url.link }}" frameborder="0" allowfullscreen></iframe>
+            <div class="caption text-center">
+                <h3>{{ url.title }}</h3>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</article>
+
