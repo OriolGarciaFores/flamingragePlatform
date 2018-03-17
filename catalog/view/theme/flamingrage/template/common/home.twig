@@ -10,27 +10,27 @@
         {% set i = 0 %}
         {% for category in categories %}
             {% if i < 6 %}
-            {% if i%2 == 0 %}
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="img-thumbnail-1">
-                        <img class="img-responsive"
-                             src="{{ category.image }}">
-                        <div class="caption text-center">
-                            {{ category.description }}
+                {% if i%2 == 0 %}
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail-1">
+                            <img class="img-responsive"
+                                 src="{{ category.image }}">
+                            <div class="caption text-center">
+                                {{ category.description }}
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% else %}
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="img-thumbnail-2">
-                        <img class="img-responsive"
-                             src="{{ category.image }}">
-                        <div class="caption text-center">
-                            {{ category.description }}
+                {% else %}
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="img-thumbnail-2">
+                            <img class="img-responsive"
+                                 src="{{ category.image }}">
+                            <div class="caption text-center">
+                                {{ category.description }}
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% endif %}
+                {% endif %}
         {% endif %}
 
             {% set i = i + 1 %}

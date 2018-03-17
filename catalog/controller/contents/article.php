@@ -6,10 +6,6 @@ class ControllerContentsArticle extends Controller{
         $this->load->model('catalog/category');
         $this->load->model('tool/image');
 
-        $this->document->setTitle($this->config->get('config_meta_title'));
-        $this->document->setDescription($this->config->get('config_meta_description'));
-        $this->document->setKeywords($this->config->get('config_meta_keyword'));
-
 
         if (isset($this->request->get['route'])) {
             $this->document->addLink($this->config->get('config_url'), 'canonical');
@@ -22,6 +18,10 @@ class ControllerContentsArticle extends Controller{
         }
 
         $category_info = $this->getArticleInfo($category_id);
+
+        $this->document->setTitle($category_info['category']['meta_title']);
+        $this->document->setDescription($category_info['category']['meta_description']);
+        $this->document->setKeywords($category_info['category']['meta_keyword']);
 
         if(isset($category_info) && !empty($category_info)){
             $data = $category_info;

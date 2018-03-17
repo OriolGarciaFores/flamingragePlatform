@@ -1,9 +1,7 @@
 <!doctype html>
 <!--[if IE]><![endif]-->
-<!--[if IE 8 ]>
-<html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
-<!--[if IE 9 ]>
-<html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
+<!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html dir="{{ direction }}" lang="{{ lang }}">
 <!--<![endif]-->
@@ -47,9 +45,7 @@
     {% endfor %}
 
     <title>{{ title }}</title>
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     {% for analytic in analytics %}
         {{ analytic }}
     {% endfor %}

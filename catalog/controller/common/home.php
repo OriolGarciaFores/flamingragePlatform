@@ -15,10 +15,10 @@ class ControllerCommonHome extends Controller
         $this->load->model('tool/image');
         $this->load->model('catalog/category');
         $data['categories'] = array();
+        $articles_info = array();
         $categories = $this->model_catalog_category->getCategories();
 
         if (isset($categories)) {
-            $i = 0;
             foreach ($categories as $category) {
 
                 $childs = $this->model_catalog_category->getCategories($category['category_id']);
@@ -29,15 +29,18 @@ class ControllerCommonHome extends Controller
                 if (isset($childs) && !empty($childs)) {
                     foreach ($childs as $key => $child) {
 
-                        $child['description'] = isset($child['description']) ? html_entity_decode(substr($child['description'], 0, 500)) : '';
+                        $articles_info[$key]['description'] = isset($child['description']) ? html_entity_decode(substr($child['description'], 0, 500)) : '';
 
                         if (isset($child['image']) && !empty($child['image'])) {
-                            $child['image'] = $this->model_tool_image->resize($child['image'],$this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_height'));
+                            $articles_info[$key]['image'] = $this->model_tool_image->resize($child['image'],$this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_category_height'));
                         } else {
-                            $child['image'] = $this->model_tool_image->resize('catalog/placeholder.jpg', 0, 0);
+                            $articles_info[$key]['image'] = $this->model_tool_image->resize('catalog/placeholder.jpg', 0, 0);
                         }
-                        $data['categories'][$i] = $child;
-                        $i = $i + 1;
+                        $data['categories'][$child['sort_order']] = array(
+                            'description' => $articles_info[$key]['description'],
+                            'image' =>  $articles_info[$key]['image']
+                        );
+
                     }
 
                 }
@@ -47,6 +50,7 @@ class ControllerCommonHome extends Controller
             $data['categories'] = '';
         }
 
+        krsort($data['categories']);
 
 
         $data['column_left'] = $this->load->controller('common/column_left');
