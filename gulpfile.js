@@ -33,6 +33,20 @@ gulp.task('catalog', function (){
         .pipe(gulp.dest('./catalog/view/theme/flamingrage/stylesheet/'));
 });
 
+gulp.task('admin', function (){
+    gulp.src(['./admin/view/stylesheet/scss/*.scss', '!./admin/view/stylesheet/_variables.scss'])
+        .pipe(sass({
+            includePaths: ['./admin/view/stylesheet/scss'],
+            outputStyle: 'expanded'
+        }))
+        .pipe(prefix(
+            "last 1 version", "> 1%", "ie 8", "ie 7"
+        ))
+        .pipe(gulp.dest('./admin/view/stylesheet/scss'))
+        .pipe(minifycss())
+        .pipe(gulp.dest('./admin/view/stylesheet/'));
+});
+
 // Uglify JS
 gulp.task('uglify', function(){
     gulp.src('./dev/js/*.js')

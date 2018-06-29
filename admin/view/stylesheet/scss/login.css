@@ -1,0 +1,112 @@
+#container {
+  background: url(http://sf.co.ua/14/08/wallpaper-709619.jpg) no-repeat center;
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  width: 35%;
+  min-width: 350px;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.3);
+  padding-bottom: 0;
+}
+
+#content .container-fluid {
+  padding: 0 40px;
+}
+
+#content .panel-default {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+#content .panel-heading {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+#content .panel-heading::before {
+  content: '';
+  background: url(http://localhost/flamingrage_opencart/image/catalog/adminTitle.png) no-repeat center center;
+  background-size: contain;
+  width: 90%;
+  height: 200px;
+  margin-left: 5%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#content .panel-body {
+  padding: 0;
+  border: none;
+}
+
+#content .form-group {
+  padding: 0 0 10px;
+}
+
+#content .form-group + .form-group {
+  border: none;
+}
+
+#content .form-group .form-control {
+  background: rgba(0, 0, 0, 0.8);
+  color: #FFF;
+}
+
+#content .form-group .help-block a {
+  color: #209e91;
+}
+
+#content .form-group .help-block a:hover {
+  color: #086157;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  height: 150px;
+  right: 0;
+  width: 35%;
+  min-width: 350px;
+  max-width: 500px;
+  left: auto;
+}
+
+#footer::before {
+  content: '';
+  background: url(http://localhost/flamingrage_opencart/image/catalog/Header/titulo.gif) no-repeat center center;
+  background-size: contain;
+  width: 50%;
+  height: 100px;
+  margin-left: 25%;
+  display: block;
+}
+
+#footer a {
+  color: #209e91;
+}
+
+#footer a:hover {
+  color: #086157;
+}
+
+.btn-danger {
+  background-color: #561810;
+  border-color: #561810;
+}
+
+.btn-danger:hover {
+  background-color: #771d11;
+  border-color: #771d11;
+}

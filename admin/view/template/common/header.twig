@@ -20,6 +20,12 @@
 <script src="view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
 <link href="view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen" />
 <link type="text/css" href="view/stylesheet/stylesheet.css" rel="stylesheet" media="screen" />
+    {% if logged == false %}
+<link type="text/css" href="view/stylesheet/login.css" rel="stylesheet" media="screen" />
+  {% endif %}
+    {% if logged %}
+      <link type="text/css" href="view/stylesheet/admin.css" rel="stylesheet" media="screen" />
+    {% endif %}
 {% for style in styles %}
 <link type="text/css" href="{{ style.href }}" rel="{{ style.rel }}" media="{{ style.media }}" />
 {% endfor %}
@@ -37,9 +43,9 @@
   <div class="container-fluid">
 
   
-    <div id="header-logo" class="navbar-header"><a href="{{ home }}" class="navbar-brand"><img src="view/image/logo.png" alt="{{ heading_title }}" title="{{ heading_title }}" /></a></div>
-    <a href="#" id="button-menu" class="hidden-md hidden-lg"><span class="fa fa-bars"></span></a>{% if logged %}
-    
+   {% if logged %}
+     <div id="header-logo" class="navbar-header"><a href="{{ home }}" class="navbar-brand"><img src="http://localhost/flamingrage_opencart/image/catalog/Header/titulo.gif" alt="{{ heading_title }}" title="{{ heading_title }}" width="180" height="50"/></a></div>
+     <a href="#" id="button-menu" class="hidden-md hidden-lg"><span class="fa fa-bars"></span></a>
     
 
     
