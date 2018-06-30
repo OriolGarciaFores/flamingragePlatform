@@ -16,7 +16,7 @@
 
   .nav {
     &> li > a {
-      &:hover {
+      &:hover, &:focus {
         background: $white-trans;
         color: #FFF;
       }
@@ -26,8 +26,17 @@
     }
   }
 
-  .dropdown-menu{
+  .dropdown-menu, .dropdown-menu{
     background:  rgba(0,0,0,0.7);
+    a{
+      color: #bbb7b7;
+      &:hover, &:focus{
+        background: rgba(255,255,255,0.3);
+      }
+    }
+    .divider{
+      background:   rgba(255,255,255,0.3);
+    }
   }
 }
 
@@ -74,12 +83,67 @@
   overflow: visible;
 }
 
-.btn-info-futuristic{
+.btn-info-fu{
   background-image: linear-gradient(to bottom, rgba(0,116,217,0.8), rgba(0,116,217,0.4));
   color: #FFF;
   &:hover{
     background-color: rgba(0,116,217,0.5);
     color: #FFF;
+  }
+}
+
+.btn-default-fu{
+  background: 0 0;
+  border: 1px solid #FFF;
+  color: #FFF;
+  &:hover{
+    @include scale(1.2);
+    color: #FFF;
+  }
+}
+
+.btn-warning-fu{
+  background: 0 0;
+  border: 1px solid #f19716;
+  color: #f19716;
+  &:hover{
+    @include transition(1s);
+    color: #FFF;
+    background: #f19716;
+  }
+}
+
+.btn-danger-fu{
+  background: 0 0;
+  border: 1px solid #a82818;
+  color: #d0321e;
+  &:hover{
+    @include transition(1s);
+    color: #FFF;
+    background: #d0321e;
+  }
+
+  &.active{
+    color: #FFF;
+    background: #d0321e;
+    border: 1px solid #a82818;
+  }
+}
+
+.btn-success-fu{
+  background: 0 0;
+  border: 1px solid #409e40;
+  color: #4cb64c;
+  &:hover{
+    @include transition(1s);
+    color: #FFF;
+    background: #4cb64c;
+  }
+
+  &.active{
+    color: #FFF;
+    background: #4cb64c;
+    border: 1px solid #409e40;
   }
 }
 
@@ -92,3 +156,33 @@
   height: 70px;
   color: #FFF;
 }
+.modal-dialog{
+  &.modal-dialog-fu{
+    .modal-content{
+      background: linear-gradient(to right, #434343, rgba(67,67,67,0.9));
+    }
+  }
+}
+.table{
+  color: $text-grey;
+  & > tbody > tr > td{
+    border-color: rgba(255,255,255,0.3);
+  }
+}
+
+.modal-title{
+  color: $text-white;
+}
+
+.modal-header{
+  .close{
+    font-weight: normal;
+    text-shadow: none;
+    opacity: 1;
+    color: $text-white;
+    &:hover{
+      color: $text-grey;
+    }
+  }
+}
+
