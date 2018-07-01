@@ -164,6 +164,12 @@
   }
 }
 
+.btn[disabled]{
+  background: 0 0;
+  border-color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.3);
+}
+
 #footer{
   position: fixed !important;
   width: 100%;
