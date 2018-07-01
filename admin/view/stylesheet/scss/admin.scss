@@ -185,6 +185,9 @@
   & > tbody > tr > td{
     border-color: rgba(255,255,255,0.3);
   }
+  &.table-manager{
+    color: $text-white;
+  }
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
@@ -207,7 +210,7 @@
   }
 }
 
-input[type="checkbox"]{
+input[type="checkbox"], .checkbox input[type="checkbox"]{
   background: 0 0;
   &:checked, &:active{
     background:  rgba(255,255,255,0.7);
@@ -229,6 +232,9 @@ input[type="checkbox"]{
 
 .form-group{
   color: $text-white;
+  &+.form-group{
+    border-color:rgba(255,255,255,0.3);
+  }
 }
 
 .form-control{
@@ -239,5 +245,9 @@ input[type="checkbox"]{
 .note-editor.note-frame .note-editing-area .note-editable{
   background-color: rgba(0,0,0,0.8) !important;
   color: $text-grey !important;
+}
+
+.well{
+  background-color:  rgba(0,0,0,0.8);
 }
 
