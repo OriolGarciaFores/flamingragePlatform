@@ -18,7 +18,6 @@
       <div class="panel-body">
         <fieldset>
           <legend>{{ text_type }}</legend>
-          <div class="well">
             <div class="input-group">
               <select name="type" class="form-control">
                 {% for category in categories %}
@@ -31,7 +30,6 @@
               </select>
               <span class="input-group-addon"><i class="fa fa-filter"></i> {{ text_filter }}</span>
             </div>
-          </div>
         </fieldset>
         <div id="extension"></div>
       </div>
@@ -64,7 +62,7 @@ $('select[name="type"]').on('change', function() {
 
 $('select[name="type"]').trigger('change');
 
-$('#extension').on('click', '.btn-success', function(e) {
+$('#extension').on('click', '.btn-success-fu', function(e) {
 	e.preventDefault();
 	
 	var element = this;
@@ -87,7 +85,7 @@ $('#extension').on('click', '.btn-success', function(e) {
 	});
 });
 
-$('#extension').on('click', '.btn-danger, .btn-warning', function(e) {
+$('#extension').on('click', '.btn-danger-fu, .btn-warning-fu', function(e) {
 	e.preventDefault();
 	
 	if (confirm('{{ text_confirm }}')) {

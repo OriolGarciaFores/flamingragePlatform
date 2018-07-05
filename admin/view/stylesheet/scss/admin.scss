@@ -75,6 +75,11 @@
     .panel-title{
       color: #FFF;
     }
+    .panel-body{
+      legend{
+        color: $text-white;
+      }
+    }
   }
 }
 
