@@ -1,5 +1,5 @@
 #container {
-  background: url(http://sf.co.ua/14/08/wallpaper-709619.jpg) no-repeat center;
+  background: url(../../../image/catalog/bg-login-admin.jpg) no-repeat center;
   background-size: cover;
   min-height: 100%;
   width: 100%;
@@ -37,7 +37,7 @@
 
 #content .panel-heading::before {
   content: '';
-  background: url(http://localhost/flamingrage_opencart/image/catalog/adminTitle.png) no-repeat center center;
+  background: url(../../../image/catalog/adminTitle.png) no-repeat center center;
   background-size: contain;
   width: 90%;
   height: 200px;
@@ -85,7 +85,7 @@
 
 #footer::before {
   content: '';
-  background: url(http://localhost/flamingrage_opencart/image/catalog/Header/titulo.gif) no-repeat center center;
+  background: url(../../../image/catalog/Header/titulo.gif) no-repeat center center;
   background-size: contain;
   width: 50%;
   height: 100px;
