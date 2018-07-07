@@ -3,9 +3,9 @@
   <div class="page-header">
     <div class="container-fluid">
       <div class="pull-right">
-        <button type="button" data-toggle="tooltip" title="{{ button_filter }}" onclick="$('#filter-seo').toggleClass('hidden-sm hidden-xs');" class="btn btn-default hidden-md hidden-lg"><i class="fa fa-filter"></i></button>
-        <a href="{{ add }}" data-toggle="tooltip" title="{{ button_add }}" class="btn btn-primary"><i class="fa fa-plus"></i></a>
-        <button type="button" data-toggle="tooltip" title="{{ button_delete }}" class="btn btn-danger" onclick="confirm('{{ text_confirm }}') ? $('#form-url-alias').submit() : false;"><i class="fa fa-trash-o"></i></button>
+        <button type="button" data-toggle="tooltip" title="{{ button_filter }}" onclick="$('#filter-seo').toggleClass('hidden-sm hidden-xs');" class="btn btn-default-fu hidden-md hidden-lg"><i class="fa fa-filter"></i></button>
+        <a href="{{ add }}" data-toggle="tooltip" title="{{ button_add }}" class="btn btn-primary-fu"><i class="fa fa-plus"></i></a>
+        <button type="button" data-toggle="tooltip" title="{{ button_delete }}" class="btn btn-danger-fu" onclick="confirm('{{ text_confirm }}') ? $('#form-url-alias').submit() : false;"><i class="fa fa-trash-o"></i></button>
       </div>
       <h1>{{ heading_title }}</h1>
       <ul class="breadcrumb">
@@ -132,7 +132,7 @@
               </select>
             </div>
             <div class="text-right">
-              <button type="button" id="button-filter" class="btn btn-default"><i class="fa fa-filter"></i> {{ button_filter }}</button>
+              <button type="button" id="button-filter" class="btn btn-default-fu"><i class="fa fa-filter"></i> {{ button_filter }}</button>
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@
           <div class="panel-body">
             <form action="{{ delete }}" method="post" enctype="multipart/form-data" id="form-url-alias">
               <div class="table-responsive">
-                <table class="table table-bordered table-hover">
+                <table class="table table-striped table-manager">
                   <thead>
                     <tr>
                       <td style="width: 1px;" class="text-center"><input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);" /></td>
@@ -170,7 +170,7 @@
                     <td class="text-left">{{ seo_url.keyword }}</td>
                     <td class="text-left">{{ seo_url.store }}</td>
                     <td class="text-left">{{ seo_url.language }}</td>
-                    <td class="text-right"><a href="{{ seo_url.edit }}" data-toggle="tooltip" title="{{ button_edit }}" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
+                    <td class="text-right"><a href="{{ seo_url.edit }}" data-toggle="tooltip" title="{{ button_edit }}" class="btn btn-primary-fu"><i class="fa fa-pencil"></i></a></td>
                   </tr>
                   {% endfor %}
                   {% else %}

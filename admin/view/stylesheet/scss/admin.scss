@@ -79,6 +79,9 @@
       legend{
         color: $text-white;
       }
+      textarea{
+        background-color: $background-black;
+      }
     }
   }
 }
@@ -189,6 +192,9 @@
     .modal-content{
       background: linear-gradient(to right, #434343, rgba(67,67,67,0.9));
     }
+    &#filemanager{
+      color: $text-white;
+    }
   }
 }
 .table{
@@ -260,5 +266,18 @@ input[type="checkbox"], .checkbox input[type="checkbox"]{
 
 .well{
   background-color:  rgba(0,0,0,0.8);
+}
+
+.dropdown-menu.dropdown-menu-right{
+  background:  rgba(0,0,0,0.7);
+  a{
+    color: #bbb7b7;
+    &:hover, &:focus{
+      background: rgba(255,255,255,0.3);
+    }
+  }
+  .divider{
+    background:   rgba(255,255,255,0.3);
+  }
 }
 

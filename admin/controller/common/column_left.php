@@ -192,21 +192,21 @@ class ControllerCommonColumnLeft extends Controller {
 				);	
 			}
 			
-			if ($this->user->hasPermission('access', 'design/theme')) {	
+			/*if ($this->user->hasPermission('access', 'design/theme')) {
 				$design[] = array(
 					'name'	   => $this->language->get('text_theme'),
 					'href'     => $this->url->link('design/theme', 'user_token=' . $this->session->data['user_token'], true),
 					'children' => array()		
 				);	
-			}
+			}*/
 			
-			if ($this->user->hasPermission('access', 'design/translation')) {
+			/*if ($this->user->hasPermission('access', 'design/translation')) {
 				$design[] = array(
 					'name'	   => $this->language->get('text_language_editor'),
 					'href'     => $this->url->link('design/translation', 'user_token=' . $this->session->data['user_token'], true),
 					'children' => array()		
 				);	
-			}
+			}*/
 						
 			if ($this->user->hasPermission('access', 'design/banner')) {
 				$design[] = array(
@@ -317,7 +317,7 @@ class ControllerCommonColumnLeft extends Controller {
 				);
 			}
 				
-			if ($this->user->hasPermission('access', 'customer/customer_approval')) {
+		/*	if ($this->user->hasPermission('access', 'customer/customer_approval')) {
 				$customer[] = array(
 					'name'	   => $this->language->get('text_customer_approval'),
 					'href'     => $this->url->link('customer/customer_approval', 'user_token=' . $this->session->data['user_token'], true),
@@ -331,7 +331,7 @@ class ControllerCommonColumnLeft extends Controller {
 					'href'     => $this->url->link('customer/custom_field', 'user_token=' . $this->session->data['user_token'], true),
 					'children' => array()		
 				);	
-			}
+			}*/
 			
 			if ($customer) {
 				$data['menus'][] = array(
@@ -429,13 +429,13 @@ class ControllerCommonColumnLeft extends Controller {
 			// Localisation
 			$localisation = array();
 			
-			if ($this->user->hasPermission('access', 'localisation/location')) {
+			/*if ($this->user->hasPermission('access', 'localisation/location')) {
 				$localisation[] = array(
 					'name'	   => $this->language->get('text_location'),
 					'href'     => $this->url->link('localisation/location', 'user_token=' . $this->session->data['user_token'], true),
 					'children' => array()		
 				);	
-			}
+			}*/
 			
 			if ($this->user->hasPermission('access', 'localisation/language')) {
 				$localisation[] = array(
@@ -445,13 +445,13 @@ class ControllerCommonColumnLeft extends Controller {
 				);
 			}
 			
-			if ($this->user->hasPermission('access', 'localisation/currency')) {
+			/*if ($this->user->hasPermission('access', 'localisation/currency')) {
 				$localisation[] = array(
 					'name'	   => $this->language->get('text_currency'),
 					'href'     => $this->url->link('localisation/currency', 'user_token=' . $this->session->data['user_token'], true),
 					'children' => array()		
 				);
-			}
+			}*/
 			
 			/*if ($this->user->hasPermission('access', 'localisation/stock_status')) {
 				$localisation[] = array(
@@ -504,7 +504,7 @@ class ControllerCommonColumnLeft extends Controller {
 				);
 			}*/
 			
-			if ($this->user->hasPermission('access', 'localisation/country')) {
+		/*	if ($this->user->hasPermission('access', 'localisation/country')) {
 				$localisation[] = array(
 					'name'	   => $this->language->get('text_country'),
 					'href'     => $this->url->link('localisation/country', 'user_token=' . $this->session->data['user_token'], true),
@@ -526,7 +526,7 @@ class ControllerCommonColumnLeft extends Controller {
 					'href'     => $this->url->link('localisation/geo_zone', 'user_token=' . $this->session->data['user_token'], true),
 					'children' => array()
 				);
-			}
+			}*/
 			
 			// Tax		
 			/*$tax = array();
@@ -555,7 +555,7 @@ class ControllerCommonColumnLeft extends Controller {
 				);
 			}*/
 			
-			if ($this->user->hasPermission('access', 'localisation/length_class')) {
+		/*	if ($this->user->hasPermission('access', 'localisation/length_class')) {
 				$localisation[] = array(
 					'name'	   => $this->language->get('text_length_class'),
 					'href'     => $this->url->link('localisation/length_class', 'user_token=' . $this->session->data['user_token'], true),
@@ -569,7 +569,7 @@ class ControllerCommonColumnLeft extends Controller {
 					'href'     => $this->url->link('localisation/weight_class', 'user_token=' . $this->session->data['user_token'], true),
 					'children' => array()
 				);
-			}
+			}*/
 			
 			if ($localisation) {																
 				$system[] = array(
@@ -590,13 +590,13 @@ class ControllerCommonColumnLeft extends Controller {
 				);
 			}
 					
-			if ($this->user->hasPermission('access', 'tool/upload')) {
+			/*if ($this->user->hasPermission('access', 'tool/upload')) {
 				$maintenance[] = array(
 					'name'	   => $this->language->get('text_upload'),
 					'href'     => $this->url->link('tool/upload', 'user_token=' . $this->session->data['user_token'], true),
 					'children' => array()		
 				);	
-			}
+			}*/
 						
 			if ($this->user->hasPermission('access', 'tool/log')) {
 				$maintenance[] = array(
@@ -627,8 +627,8 @@ class ControllerCommonColumnLeft extends Controller {
 				);
 			}
 			
-			$report = array();
-							
+		//	$report = array();
+		/*
 			if ($this->user->hasPermission('access', 'report/report')) {
 				$report[] = array(
 					'name'	   => $this->language->get('text_reports'),
@@ -643,7 +643,7 @@ class ControllerCommonColumnLeft extends Controller {
 					'href'     => $this->url->link('report/online', 'user_token=' . $this->session->data['user_token'], true),
 					'children' => array()		
 				);
-			}
+			}*/
 											
 			/*if ($this->user->hasPermission('access', 'report/statistics')) {
 				$report[] = array(
@@ -652,14 +652,14 @@ class ControllerCommonColumnLeft extends Controller {
 					'children' => array()		
 				);
 			}	*/
-			
+			/*
 			$data['menus'][] = array(
 				'id'       => 'menu-report',
 				'icon'	   => 'fa-bar-chart-o', 
 				'name'	   => $this->language->get('text_reports'),
 				'href'     => '',
 				'children' => $report
-			);	
+			);	*/
 			
 			// Stats
 			/*$this->load->model('sale/order');
