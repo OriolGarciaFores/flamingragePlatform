@@ -105,3 +105,29 @@ $color-text: #8a8d93;
       border-color: #771d11;
     }
   }
+
+.btn-default-fu{
+  background: 0 0;
+  border: 1px solid #FFF;
+  color: #FFF;
+  &:hover{
+    background-color: #FFF;
+    color: #000000;
+  }
+}
+
+.btn-primary-fu{
+  background: 0 0;
+  border: 1px solid #197bb0;
+  color: #1e91cf;
+  &:hover{
+    color: #FFF;
+    background: #1e91cf;
+  }
+
+  &.active{
+    color: #FFF;
+    background: #1e91cf;
+    border: 1px solid #197bb0;
+  }
+}
