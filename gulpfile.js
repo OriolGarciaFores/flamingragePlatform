@@ -31,6 +31,23 @@ gulp.task('catalog', function (){
         .pipe(gulp.dest('./catalog/view/theme/flamingrage/stylesheet/scss'))
         .pipe(minifycss())
         .pipe(gulp.dest('./catalog/view/theme/flamingrage/stylesheet/'));
+
+    gulp.src(['./catalog/view/javascript/jquery/swiper/css/opencart.css', ''])
+        .pipe(sass({
+            includePaths: ['./catalog/view/javascript/jquery/swiper/css/opencart.css'],
+            outputStyle: 'expanded'
+        }))
+        .pipe(prefix(
+            "last 1 version", "> 1%", "ie 8", "ie 7"
+        ))
+        .pipe(gulp.dest('./catalog/view/javascript/jquery/swiper/css/'))
+        .pipe(minifycss())
+        .pipe(gulp.dest('./catalog/view/javascript/jquery/swiper/css/'));
+
+    gulp.src('./dev/js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./prod/js'));
+
 });
 
 gulp.task('admin', function (){

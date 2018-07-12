@@ -61,8 +61,7 @@ class ControllerCommonFooter extends Controller {
 			$this->model_tool_online->addOnline($ip, $this->customer->getId(), $url, $referer);
 		}
 
-		$data['scripts'] = $this->document->getScripts('footer');
-		
+		$data['scripts'] = $this->document->getScripts();
 		return $this->load->view('common/footer', $data);
 	}
 }
