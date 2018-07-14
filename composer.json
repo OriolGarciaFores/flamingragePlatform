@@ -1,6 +1,8 @@
 {
   "require":{
-    "symfony/var-dumper": "^3.1"
+    "symfony/var-dumper": "^3.1",
+    "tinify/tinify": "1.5.1",
+    "filp/whoops":"*"
   },
   "config":{
     "vendor-dir": "system/library"
