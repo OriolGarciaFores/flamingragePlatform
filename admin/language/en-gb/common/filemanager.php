@@ -21,3 +21,4 @@ $_['error_filesize']   = 'Warning: Incorrect file size!';
 $_['error_filetype']   = 'Warning: Incorrect file type!';
 $_['error_upload']     = 'Warning: File could not be uploaded for an unknown reason!';
 $_['error_delete']     = 'Warning: You can not delete this directory!';
+$_['error_max_size']   = 'Warning: Superate max size!';

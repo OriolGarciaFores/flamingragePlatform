@@ -189,7 +189,8 @@ class ControllerCommonFileManager extends Controller {
 	}
 
 	public function upload() {
-		$this->load->language('common/filemanager');
+
+        $this->load->language('common/filemanager');
 
 		$json = array();
 
@@ -223,7 +224,11 @@ class ControllerCommonFileManager extends Controller {
 						'error'    => $this->request->files['file']['error'][$key],
 						'size'     => $this->request->files['file']['size'][$key]
 					);
-				}
+
+                    if($this->config->get('config_file_max_size') < $this->request->files['file']['size'][$key]){
+                        $json['error'][] = $this->language->get('error_max_size') . ' ' . $this->request->files['file']['name'][$key];
+                    }
+                }
 			}
 
 			foreach ($files as $file) {
@@ -270,7 +275,23 @@ class ControllerCommonFileManager extends Controller {
 				}
 
 				if (!$json) {
-					move_uploaded_file($file['tmp_name'], $directory . '/' . $filename);
+					if(move_uploaded_file($file['tmp_name'], $directory . '/' . $filename) && DB_HOSTNAME != 'localhost' && !empty( $this->config->get('config_api_tinify'))){
+                        try{
+                            \Tinify\setKey( $this->config->get('config_api_tinify'));
+                            $source = \Tinify\fromFile($directory . '/' . $filename);
+                            $source->toFile($directory . '/' . $filename);
+                        }catch(\Tinify\AccountException $e){
+                            $json['error'] = $e->getMessage();
+                        } catch(\Tinify\ClientException $e){
+                            $json['error'] = $e->getMessage();
+                        } catch(\Tinify\ServerException $e){
+                            $json['error'] = $e->getMessage();
+                        } catch(\Tinify\ConnectionException $e){
+                            $json['error'] = $e->getMessage();
+                        } catch(Exception $e){
+                            $json['error'] = $e->getMessage();
+                        }
+                    }
 				}
 			}
 		}
