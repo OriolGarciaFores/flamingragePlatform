@@ -15,5 +15,5 @@ if (!defined('DIR_APPLICATION')) {
 
 // Startup
 require_once(DIR_SYSTEM . 'startup.php');
-
+//error_reporting(0);
 start('admin');
