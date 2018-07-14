@@ -225,7 +225,7 @@ class ControllerCommonFileManager extends Controller {
 						'size'     => $this->request->files['file']['size'][$key]
 					);
 
-                    if($this->config->get('config_file_max_size') < $this->request->files['file']['size'][$key]){
+                    if((int)$this->request->files['file']['size'][$key] > (int)$this->config->get('config_file_max_size')){
                         $json['error'][] = $this->language->get('error_max_size') . ' ' . $this->request->files['file']['name'][$key];
                     }
                 }
