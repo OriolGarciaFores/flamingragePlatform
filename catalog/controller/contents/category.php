@@ -49,6 +49,7 @@ class ControllerContentsCategory extends Controller{
             $data['title'] = $this->model_catalog_category->getCategory($category_id)['name'];
             $data['categories'] = $this->model_catalog_category->getCategories($category_id);
             $categories = array();
+            $category_info = array();
 
             if(!isset($data['title']))
             {
@@ -56,13 +57,21 @@ class ControllerContentsCategory extends Controller{
             }
 
             foreach ($data['categories'] as $key => $category){
-                $categories['categories'][$category['sort_order']]['description'] = isset($category['description']) ? html_entity_decode(substr($category['description'], 0, 500)) : '';
+                $category_info['description'] = isset($category['description']) ? html_entity_decode(substr($category['description'], 0, 500)) : '';
 
                 if (isset($category['image']) && !empty($category['image'])) {
-                    $categories['categories'][$category['sort_order']]['image'] = $this->model_tool_image->resize($category['image'], 0, 0);
+                    $category_info['image'] = $this->model_tool_image->resize($category['image'], 0, 0);
                 } else {
-                    $categories['categories'][$category['sort_order']]['image'] = $this->model_tool_image->resize('catalog/placeholder.jpg', 0, 0);
+                    $category_info['image'] = $this->model_tool_image->resize('catalog/placeholder.jpg', 0, 0);
                 }
+
+                $categories['categories'][$category['sort_order']] = array(
+                    'image' => $category_info['image'],
+                    'description' => $category_info['description'],
+                    'name' => $category['name'],
+                    'href' =>  $this->url->link('contents/article', 'path=' . $category['category_id']),
+                    'created_at' => date("d-m-Y h:i", strtotime($category['date_added']))
+                );
 
             }
             krsort($categories['categories']);

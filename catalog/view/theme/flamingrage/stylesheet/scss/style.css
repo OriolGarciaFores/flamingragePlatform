@@ -7688,12 +7688,16 @@ body {
 }
 
 body .date {
-  margin-top: 10px;
-  font-size: 20px;
-  font-size: 1.25rem;
+  color: #807d7d;
+  position: absolute;
+  bottom: 5px;
+  font-size: 12px;
+  font-size: 0.75rem;
+  margin: 0 13px;
 }
 
 body a h2 {
+  margin-left: 13px;
   text-decoration: none;
   color: #FFFFE7;
 }
@@ -7923,7 +7927,7 @@ NAVIGATION
 }
 
 .last-posts .col-md-4 .img-thumbnail-1 .caption p, .last-posts .col-md-4 .img-thumbnail-2 .caption p {
-  color: #535353;
+  color: #807d7d;
 }
 
 .last-posts .col-md-4 .img-thumbnail-2 {
@@ -7950,7 +7954,7 @@ NAVIGATION
 }
 
 .last-change p, .last-change li {
-  color: #535353;
+  color: #807d7d;
 }
 
 .last-change h2 {
@@ -8051,11 +8055,11 @@ footer #myBtn:hover {
 }
 
 footer a {
-  color: #535353;
+  color: #807d7d;
 }
 
 footer a:focus {
-  color: #535353;
+  color: #807d7d;
   text-decoration: none;
 }
 
@@ -8101,7 +8105,7 @@ footer hr {
 }
 
 #category .img-thumbnail p {
-  color: #535353;
+  color: #807d7d;
 }
 
 #category .img-thumbnail img {
@@ -8141,7 +8145,7 @@ footer hr {
 }
 
 #article p {
-  color: #535353;
+  color: #807d7d;
 }
 
 #article p img {
@@ -8154,7 +8158,7 @@ footer hr {
 
 #article li {
   list-style-type: circle;
-  color: #535353;
+  color: #807d7d;
 }
 
 #article li.list-number {
@@ -8204,7 +8208,7 @@ footer hr {
 }
 
 #info-web p {
-  color: #535353;
+  color: #807d7d;
 }
 
 #info-web .thumbnail {
@@ -8456,7 +8460,7 @@ footer hr {
 }
 
 #error-not-found p {
-  color: #535353;
+  color: #807d7d;
   font-size: 22px;
   font-size: 1.375rem;
 }

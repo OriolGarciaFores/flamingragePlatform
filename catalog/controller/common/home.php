@@ -37,8 +37,11 @@ class ControllerCommonHome extends Controller
                             $articles_info[$key]['image'] = $this->model_tool_image->resize('catalog/placeholder.jpg', 0, 0);
                         }
                         $data['categories'][$child['sort_order']] = array(
+                            'created_at' =>  date("d-m-Y h:i", strtotime($child['date_added'])),
                             'description' => $articles_info[$key]['description'],
-                            'image' =>  $articles_info[$key]['image']
+                            'image' =>  $articles_info[$key]['image'],
+                            'href' => $this->url->link('contents/article', 'path=' . $child['category_id']),
+                            'name' => $child['name']
                         );
 
                     }
