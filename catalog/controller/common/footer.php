@@ -19,16 +19,16 @@ class ControllerCommonFooter extends Controller {
         $this->load->model('catalog/information');
         $informations = $this->model_catalog_information->getInformations();
 
-        $data['team'] = $this->url->link('information/information', 'information_id=' . $informations[1]['information_id']);
-        $data['information'] = $this->url->link('information/information' , 'information_id=' . $informations[0]['information_id']);
-		$data['contact'] = $this->url->link('information/contact');
+        $data['team'] = $this->url->link('information/information', 'information_id=' . $informations[1]['information_id'], true);
+        $data['information'] = $this->url->link('information/information' , 'information_id=' . $informations[0]['information_id'], true);
+		$data['contact'] = $this->url->link('information/contact', '', true);
 		$data['return'] = $this->url->link('account/return/add', '', true);
-		$data['sitemap'] = $this->url->link('information/sitemap');
-		$data['tracking'] = $this->url->link('information/tracking');
-		$data['manufacturer'] = $this->url->link('product/manufacturer');
+		$data['sitemap'] = $this->url->link('information/sitemap', '', true);
+		$data['tracking'] = $this->url->link('information/tracking', '', true);
+		$data['manufacturer'] = $this->url->link('product/manufacturer', '', true);
 		$data['voucher'] = $this->url->link('account/voucher', '', true);
 		$data['affiliate'] = $this->url->link('affiliate/login', '', true);
-		$data['special'] = $this->url->link('product/special');
+		$data['special'] = $this->url->link('product/special', '', true);
 		$data['account'] = $this->url->link('account/account', '', true);
 		$data['order'] = $this->url->link('account/order', '', true);
 		$data['wishlist'] = $this->url->link('account/wishlist', '', true);

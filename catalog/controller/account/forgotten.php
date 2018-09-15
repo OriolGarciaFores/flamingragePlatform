@@ -62,7 +62,7 @@ class ControllerAccountForgotten extends Controller {
 		$data['header'] = $this->load->controller('common/header');
 
 		//$this->response->setOutput($this->load->view('account/forgotten', $data));
-        $this->response->redirect($this->url->link('error/not_found'));
+        $this->response->redirect($this->url->link('error/not_found', '', true));
 	}
 
 	protected function validate() {

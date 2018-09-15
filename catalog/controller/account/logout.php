@@ -36,7 +36,7 @@ class ControllerAccountLogout extends Controller {
 			'href' => $this->url->link('account/logout', '', true)
 		);
 
-		$data['continue'] = $this->url->link('common/home');
+		$data['continue'] = $this->url->link('common/home', '', true);
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');

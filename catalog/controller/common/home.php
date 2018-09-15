@@ -40,7 +40,7 @@ class ControllerCommonHome extends Controller
                             'created_at' =>  date("d-m-Y h:i", strtotime($child['date_added'])),
                             'description' => $articles_info[$key]['description'],
                             'image' =>  $articles_info[$key]['image'],
-                            'href' => $this->url->link('contents/article', 'path=' . $child['category_id']),
+                            'href' => $this->url->link('contents/article', 'path=' . $child['category_id'], true),
                             'name' => $child['name']
                         );
 

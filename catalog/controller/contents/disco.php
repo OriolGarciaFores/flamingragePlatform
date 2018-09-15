@@ -31,7 +31,7 @@ class ControllerContentsDisco extends Controller{
 
             $this->response->setOutput($this->load->view('contents/disco', $data));
         } else{
-            $this->response->redirect($this->url->link('error/not_found'));
+            $this->response->redirect($this->url->link('error/not_found', '', true));
         }
     }
 

@@ -27,14 +27,14 @@ class ControllerInformationInformation extends Controller {
 
             $data['breadcrumbs'][] = array(
                 'text' => $information_info['title'],
-                'href' => $this->url->link('information/information', 'information_id=' .  $information_id)
+                'href' => $this->url->link('information/information', 'information_id=' .  $information_id, true)
             );
 
             $data['heading_title'] = $information_info['title'];
 
             $data['description'] = html_entity_decode($information_info['description'], ENT_QUOTES, 'UTF-8');
 
-            $data['continue'] = $this->url->link('common/home');
+            $data['continue'] = $this->url->link('common/home', '', true);
 
             $data['column_left'] = $this->load->controller('common/column_left');
             $data['column_right'] = $this->load->controller('common/column_right');
@@ -45,7 +45,7 @@ class ControllerInformationInformation extends Controller {
 
             $this->response->setOutput($this->load->view('information/information', $data));
         } else {
-            $this->response->redirect($this->url->link('error/not_found'));
+            $this->response->redirect($this->url->link('error/not_found', '', true));
         }
     }
 

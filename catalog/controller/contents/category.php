@@ -38,7 +38,7 @@ class ControllerContentsCategory extends Controller{
 
             $this->response->setOutput($this->load->view('contents/category', $data));
         }else{
-            $this->response->redirect($this->url->link('error/not_found'));
+            $this->response->redirect($this->url->link('error/not_found', '', true));
         }
 
     }
@@ -69,7 +69,7 @@ class ControllerContentsCategory extends Controller{
                     'image' => $category_info['image'],
                     'description' => $category_info['description'],
                     'name' => $category['name'],
-                    'href' =>  $this->url->link('contents/article', 'path=' . $category['category_id']),
+                    'href' =>  $this->url->link('contents/article', 'path=' . $category['category_id'], true),
                     'created_at' => date("d-m-Y h:i", strtotime($category['date_added']))
                 );
 

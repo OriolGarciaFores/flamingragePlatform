@@ -69,10 +69,10 @@ class ControllerCommonHeader extends Controller
         }
 
 
-        $data['home'] = $this->url->link('common/home');
+        $data['home'] = $this->url->link('common/home', '',true);
         $data['wishlist'] = $this->url->link('account/wishlist', '', true);
         $data['logout'] = $this->url->link('account/logout', '', true);
-        $data['contact'] = $this->url->link('information/contact');
+        $data['contact'] = $this->url->link('information/contact', true);
 
         $data['categories'] = $categories;
         $this->load->model('design/banner');
@@ -82,9 +82,9 @@ class ControllerCommonHeader extends Controller
             $category_layout = $this->model_catalog_category->getCategoryLayoutId($category['category_id']);
             $layout = $this->model_design_layout->getRoute($category_layout);
             if(!empty($layout)){
-                $data['categories'][$key]['href'] = $this->url->link($layout[0]['route'], 'category_id=' . $category['category_id']);
+                $data['categories'][$key]['href'] = $this->url->link($layout[0]['route'], 'category_id=' . $category['category_id'], true);
             }else{
-                $data['categories'][$key]['href'] = $this->url->link('contents/category', 'category_id=' . $category['category_id']);
+                $data['categories'][$key]['href'] = $this->url->link('contents/category', 'category_id=' . $category['category_id'], true);
             }
 
         }
