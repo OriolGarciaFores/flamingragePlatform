@@ -8216,8 +8216,39 @@ footer hr {
   border: 0 none;
 }
 
+#info-web .thumbnail:hover .img-circle {
+  opacity: 0.3;
+  transition: 0.4s;
+}
+
 #info-web .thumbnail .caption-perfil {
   padding: 1rem;
+}
+
+#info-web .thumbnail:hover .social {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+#info-web .thumbnail .social {
+  opacity: 0;
+  position: absolute;
+  top: 122px;
+  left: 1px;
+  font-size: 31px;
+  font-size: 1.9375rem;
+  text-align: center;
+  width: 100%;
+}
+
+#info-web .thumbnail .social a {
+  color: #963;
+  margin: 0 8px;
+}
+
+#info-web .thumbnail .social a:hover {
+  color: white;
+  transition: 0.4s;
 }
 
 /*

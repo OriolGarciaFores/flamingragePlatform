@@ -557,8 +557,34 @@ footer {
   .thumbnail {
     background-color: transparent;
     border: 0 none;
+    &:hover .img-circle{
+      opacity: 0.3;
+      @include transition(0.4s);
+    }
     .caption-perfil {
       padding: 1rem;
+    }
+
+    &:hover .social{
+      @include transition(0.4s);
+      opacity: 1;
+    }
+    .social{
+      opacity: 0;
+      position: absolute;
+      top: 122px;
+      left: 1px;
+      @include font-size(31px);
+      text-align: center;
+      width: 100%;
+      a{
+        color: $color-brown;
+        margin: 0 8px;
+        &:hover{
+          color:white;
+          @include transition(0.4s);
+        }
+      }
     }
   }
 }
