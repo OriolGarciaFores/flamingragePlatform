@@ -867,7 +867,6 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 1.5em;
     width: 3em; /*touch element*/
     height: 3em;
     display: initial; //reset display:none
@@ -879,7 +878,7 @@ footer {
     position: fixed;
     width: 14.5em; /*200px*/
     padding: 0 1em;
-    top: 0;
+    top: 50px;
     transform: translate(-15em, 0); /*Moves the drawer off canvas*/
     -webkit-transform: translate(-15em, 0);
     -moz-transform: translate(-15em, 0);

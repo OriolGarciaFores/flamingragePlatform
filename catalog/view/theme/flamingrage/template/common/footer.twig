@@ -112,13 +112,22 @@
         var menu = document.querySelector('#menuIcon');
         var main = document.querySelector('main');
         var drawer = document.querySelector('#drawer');
+        var body = $("body");
 
         menu.addEventListener('click', function (e) {
+            var element = document.querySelector("body");
             drawer.classList.toggle('open');
+
+            if(element.style.position == "fixed"){
+                $("body").css("position","");
+            }else{
+                body.css("position","fixed");
+            }
             e.stopPropagation();
         });
         main.addEventListener('click', function () {
             drawer.classList.remove('open');
+            $("body").css("position","");
         });
     </script>
    <!-- <script type="text/javascript" src="catalog/view/theme/flamingrage/javascript/snow.js"></script>-->
