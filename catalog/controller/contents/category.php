@@ -70,7 +70,7 @@ class ControllerContentsCategory extends Controller{
                     'description' => $category_info['description'],
                     'name' => $category['name'],
                     'href' =>  $this->url->link('contents/article', 'path=' . $category['category_id'], true),
-                    'created_at' => date("d-m-Y h:i", strtotime($category['date_added']))
+                    'created_at' => date("d-m-Y H:i", strtotime($category['date_added']))
                 );
 
             }
